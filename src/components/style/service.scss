@@ -1,0 +1,86 @@
+@use "./vars.scss" as *;
+.services {
+  @include sectionTitleStyling;
+  &.services-ar {
+    .first-lines {
+      margin-right: 0px !important;
+      margin-left: 10px;
+    }
+    .last-lines {
+      margin-left: 0px !important;
+      margin-right: 10px;
+    }
+  }
+  .over-title {
+    margin-left: 0 !important;
+  }
+  h2 {
+    justify-content: center;
+  }
+  .head-section-title {
+    font-size: 15px;
+    margin-top: 10px;
+    color: #555;
+    width: 55%;
+    margin-inline: auto;
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    .service {
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      position: relative;
+      padding-bottom: 20px;
+      &:hover {
+        img {
+          transform: scale(1.2);
+        }
+      }
+      .service-information {
+        padding: 20px;
+      }
+      .service-img {
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+          transition: 0.3s;
+        }
+      }
+      h3 {
+        font-size: 1.1em;
+        margin-top: 10px;
+        color: $headingColor;
+        font-weight: 700;
+      }
+      p {
+        font-size: 15px;
+        margin-top: 10px;
+        color: #555;
+      }
+      a {
+        padding: 7px 15px;
+        background-color: $mainColor;
+        color: #fff;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: 0.3s;
+        margin-top: 15px;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        &:hover {
+          background-color: $secondColor;
+        }
+      }
+    }
+  }
+}

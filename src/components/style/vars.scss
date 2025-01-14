@@ -1,0 +1,39 @@
+$mainColor : #c3996c;
+$secondColor : #0a4e68;
+$headingColor: #171e30;
+
+@mixin sectionTitleStyling{
+    .head-section-title{
+        .over-title{
+            margin-left: 45px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: capitalize;
+            color: $secondColor;
+            margin-bottom: -10px;
+            display: inline-block;
+        }
+        h2{
+            font-size: calc(1rem + .5vw);
+            font-weight: 900;
+            color: $headingColor;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            .first-lines{
+                width: 35px;
+                height: 3px;
+                background-color: $mainColor;
+                display: inline-block;
+                margin-right: 10px;
+            }
+            .last-lines{
+                width: 35px;
+                height: 3px;
+                background-color: $mainColor;
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+    }
+}

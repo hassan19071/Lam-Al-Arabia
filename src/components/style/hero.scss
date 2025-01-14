@@ -1,0 +1,114 @@
+@use "./vars.scss" as *;
+
+.hero-container {
+  .hero-ar {
+    .carousel-caption {
+      transform: translateY(-25%) translateX(300px) !important;
+      transition: transform 0.5s linear;
+      &.animate {
+        transform: translateY(-25%) translateX(0px) !important;
+      }
+    }
+  }
+  .carousel-item {
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#000, 0.7);
+    }
+    img {
+      height: 620px;
+      object-fit: cover;
+      @media (min-width: 481px) and (max-width: 767px) {
+        height: 600px;
+      }
+    }
+    .carousel-caption {
+      top: 40%;
+      left: 15%;
+      text-align: start;
+      transform: translateY(-25%) translateX(-300px);
+      transition: transform 0.5s linear;
+      &.animate {
+        transform: translateY(-25%) translateX(0px) !important;
+      }
+      @media (max-width: 991px) {
+        left: 10%;
+      }
+      h1 {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: calc(1.2rem + 1.5vw);
+        font-weight: 800;
+        width: 60%;
+        @media (max-width: 991px) {
+          width: 100%;
+        }
+      }
+      p {
+        width: 60%;
+        color: rgb(231, 230, 230);
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        @media (max-width: 991px) {
+          width: 100%;
+          font-size: 14px;
+        }
+      }
+      a {
+        background-color: $secondColor;
+        color: #fff;
+        padding: 10px 30px;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: 0.3s;
+        &:hover {
+          background-color: $mainColor;
+        }
+        i {
+          font-size: 12px;
+          animation: moveArrow 2s linear infinite alternate;
+        }
+        @keyframes moveArrow {
+          0% {
+            transform: translateX(0); /* Initial position */
+          }
+          50% {
+            transform: translateX(6px); /* Move right */
+          }
+          100% {
+            transform: translateX(0); /* Move back to the original position */
+          }
+        }
+      }
+    }
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: fit-content;
+    background-color: $mainColor;
+    height: fit-content;
+    top: 50%;
+    padding: 8px;
+    span {
+      background-color: $mainColor !important;
+    }
+    @media (max-width: 581px) {
+      display: none;
+    }
+  }
+}
+
+.mini-hero {
+  background-color: $secondColor;
+  color: #fff;
+  padding: 70px 0;
+  h2 {
+    font-size: calc(1rem + 1vw);
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,44 @@
+@use "./vars.scss" as *;
+
+.contact-information {
+  background-color: #eee;
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(333.333px, 1fr));
+    gap: 30px;
+    .info {
+      background-color: #fff;
+      padding: 30px 20px;
+      .icon {
+        background-color: $mainColor;
+        width: 50px;
+        height: 50px;
+        color: #fff;
+        border-radius: 50%;
+        margin-inline: auto;
+        font-size: 18px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .text-info {
+        h4 {
+          color: $headingColor;
+          font-size: 18px;
+          font-weight: 700;
+          margin-bottom: 1px;
+        }
+        span {
+          color: #646464;
+          font-size: 15px;
+          a {
+            text-decoration: none;
+            color: #646464;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}

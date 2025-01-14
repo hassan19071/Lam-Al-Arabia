@@ -1,0 +1,98 @@
+@use "./vars.scss" as *;
+
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  .navbar-expand-lg .navbar-collapse {
+    flex-basis: 100% !important;
+  }
+  /* Style the dropdown container */
+  .nav-item.dropdown {
+    position: relative;
+
+    /* Show the dropdown menu when hovering over the parent container */
+    &:hover .dropdown-menu {
+      display: block;
+    }
+
+    /* Ensure that the caret-down icon is visible next to the link */
+    .nav-link {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  /* Style the dropdown menu (hidden by default) */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+
+    /* Style the dropdown items */
+    .dropdown-item {
+      padding: 8px 12px;
+      color: #333;
+      text-decoration: none;
+      display: block;
+
+      /* Hover effect for dropdown items */
+      &:hover {
+        background-color: #f8f8f8;
+        color: $mainColor;
+      }
+    }
+  }
+
+  .navbar-brand {
+    img {
+      width: 80%; /* Makes the logo width responsive */
+      max-width: 200px; /* Maximum width to ensure the logo doesn’t get too big */
+      min-width: 100px; /* Minimum width to ensure the logo doesn’t get too small */
+      height: auto;
+    }
+  }
+  .nav-item {
+    margin-left: 10px;
+    a {
+      text-transform: capitalize;
+      color: #0f0f0f;
+      font-size: 16px;
+      font-weight: 500;
+      &.active,
+      &:hover {
+        color: $mainColor;
+      }
+    }
+  }
+  .navbar-toggler {
+    &:focus {
+      box-shadow: $mainColor 0px 2px 2px 0px;
+    }
+  }
+  .contact-infos {
+    a {
+      &.contact {
+        background-color: $mainColor;
+        color: #fff;
+        padding: 8px 20px;
+        transition: 0.3s;
+        &:hover {
+          background-color: $secondColor;
+        }
+      }
+      &.phone {
+        color: $secondColor;
+        font-size: 16px;
+        font-weight: 500;
+        &:hover {
+          color: $mainColor;
+        }
+      }
+    }
+  }
+}

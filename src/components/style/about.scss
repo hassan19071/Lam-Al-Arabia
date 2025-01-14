@@ -1,0 +1,92 @@
+@use "./vars.scss" as *;
+.about-us {
+  &.about-ar {
+    .over-title {
+      margin-left: 0 !important;
+      margin-right: 45px;
+    }
+    .first-lines {
+      margin-right: 0px !important;
+      margin-left: 10px;
+    }
+    .last-lines {
+      margin-left: 0px !important;
+      margin-right: 10px;
+    }
+  }
+  .about-us-img {
+    img {
+      border-radius: 30px 0 30px 0px;
+    }
+  }
+  .about-us-text {
+    @include sectionTitleStyling;
+    p {
+      font-size: 16px;
+      color: #444;
+    }
+    a {
+      padding: 8px 20px;
+      background-color: $mainColor;
+      color: #fff;
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: 0.3s;
+      margin-top: 15px;
+      display: inline-block;
+      &:hover {
+        background-color: $secondColor;
+      }
+    }
+  }
+  .vision {
+    .icon {
+      img {
+        width: 50px;
+      }
+    }
+    .text {
+      h3 {
+        font-size: 1.1em;
+        margin-top: 0px;
+        color: $headingColor;
+        font-weight: 700;
+      }
+      p {
+        font-size: 16px;
+        color: #444;
+      }
+    }
+  }
+  .company-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(333.3333px, 1fr));
+    gap: 30px;
+    .company-feature {
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      padding: 30px 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+      .icon {
+        img {
+          width: 50px;
+        }
+      }
+      .text {
+        h3 {
+          font-size: 1.1em;
+          margin-top: 0px;
+          color: $headingColor;
+          font-weight: 700;
+        }
+        p {
+          font-size: 15px;
+          color: #444;
+        }
+      }
+    }
+  }
+}
