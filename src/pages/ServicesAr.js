@@ -11,10 +11,12 @@ function ServicesPageAr() {
   useEffect(() => {
     // Set the page direction to RTL when this component is rendered
     document.body.dir = "rtl";
+    document.documentElement.lang = "ar";
 
     // Cleanup when the component is unmounted (if you use this approach for switching pages)
     return () => {
       document.body.dir = "ltr"; // Revert back to LTR if needed
+      document.documentElement.lang = "en";
     };
   }, []);
 
