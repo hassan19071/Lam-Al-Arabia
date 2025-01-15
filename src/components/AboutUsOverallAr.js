@@ -1,6 +1,6 @@
 import React from "react";
 import "./style/about.scss";
-import AboutImg from "../assets/about-us.jpg";
+import AboutImg from "../assets/about-us.jpeg";
 import MissionIcon from "../assets/mission.png";
 import VisionIcon from "../assets/shared-vision.png";
 import ApprochIcon from "../assets/methods.png";

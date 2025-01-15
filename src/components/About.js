@@ -1,6 +1,6 @@
 import React from "react";
 import "./style/about.scss";
-import AboutImg from "../assets/about-us.jpg";
+import AboutImg from "../assets/about-us.jpeg";
 import { Link } from "react-router-dom";
 
 const AboutUs = () => {
