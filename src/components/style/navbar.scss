@@ -39,10 +39,9 @@
       color: #333;
       text-decoration: none;
       display: block;
-
       /* Hover effect for dropdown items */
-      &:hover {
-        background-color: #f8f8f8;
+      &:hover , &.active, &:focus {
+        background-color: #f8f8f8 !important;
         color: $mainColor;
       }
     }

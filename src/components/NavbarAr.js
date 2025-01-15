@@ -61,7 +61,7 @@ function NavbarAr({ page }) {
               <ul className="dropdown-menu text-end">
                 <li>
                   <Link
-                    className="dropdown-item"
+                    className={page === "accounting"?"dropdown-item active":"dropdown-item"}
                     to="/ar/خدماتنا/accounting-and-bookkeeping-services"
                   >
                     خدمات المحاسبة ومسك الدفاتر
@@ -69,7 +69,7 @@ function NavbarAr({ page }) {
                 </li>
                 <li>
                   <Link
-                    className="dropdown-item"
+                    className={page === "zakat and tax"?"dropdown-item active":"dropdown-item"}
                     to="/ar/خدماتنا/zakkat-and-tax-services"
                   >
                     خدمات الزكاة والضرائب
@@ -77,18 +77,42 @@ function NavbarAr({ page }) {
                 </li>
                 <li>
                   <Link
-                    className="dropdown-item"
+                    className={page === "consulting"?"dropdown-item active":"dropdown-item"}
                     to="/ar/خدماتنا/financial-consulting"
                   >
-                    الاستشارات المالية{" "}
+                    الاستشارات المالية
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className="dropdown-item"
-                    to="/ar/خدماتنا/Issuance-of-Local-Content-Certificate"
+                    className={page === "certificate"?"dropdown-item active":"dropdown-item"}
+                    to="/ar/خدماتنا/contractor-classification-certificate-issuance/"
                   >
-                    إصدار شهادة المحتوى المحلي
+                    إصدار شهادة تصنيف المقاولين
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={page === "company"?"dropdown-item active":"dropdown-item"}
+                    to="/ar/خدماتنا/company-formation-services/"
+                  >
+                    تأسيس الشركات
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={page === "financing"?"dropdown-item active":"dropdown-item"}
+                    to="/ar/خدماتنا/financing-services/"
+                  >
+                    خدمات التمويل
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={page === "feasibility"?"dropdown-item active":"dropdown-item"}
+                    to="/ar/خدماتنا/feasibility-studies-services/"
+                  >
+                    دراسات الجدوى
                   </Link>
                 </li>
               </ul>

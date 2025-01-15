@@ -56,7 +56,11 @@ function Navbar({ page }) {
               <ul className="dropdown-menu" aria-labelledby="servicesDropdown">
                 <li>
                   <Link
-                    className="dropdown-item"
+                    className={
+                      page === "accounting"
+                        ? "dropdown-item active"
+                        : "dropdown-item"
+                    }
                     to="/services/accounting-and-bookkeeping-services"
                   >
                     Accounting & Bookkeeping
@@ -64,7 +68,11 @@ function Navbar({ page }) {
                 </li>
                 <li>
                   <Link
-                    className="dropdown-item"
+                    className={
+                      page === "zakat and tax"
+                        ? "dropdown-item active"
+                        : "dropdown-item"
+                    }
                     to="/services/zakkat-and-tax-services"
                   >
                     Zakat & Tax Services
@@ -72,7 +80,11 @@ function Navbar({ page }) {
                 </li>
                 <li>
                   <Link
-                    className="dropdown-item"
+                    className={
+                      page === "consulting"
+                        ? "dropdown-item active"
+                        : "dropdown-item"
+                    }
                     to="/services/financial-consulting"
                   >
                     Financial Consulting
@@ -80,10 +92,50 @@ function Navbar({ page }) {
                 </li>
                 <li>
                   <Link
-                    className="dropdown-item"
-                    to="/services/Issuance-of-Local-Content-Certificate"
+                    className={
+                      page === "certificate"
+                        ? "dropdown-item active"
+                        : "dropdown-item"
+                    }
+                    to="/services/contractor-classification-certificate-issuance/"
                   >
-                    Local Content Certificate
+                    Contractor Classification Certificate
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={
+                      page === "financing"
+                        ? "dropdown-item active"
+                        : "dropdown-item"
+                    }
+                    to="/services/financing-services/"
+                  >
+                    Financing Services
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={
+                      page === "company"
+                        ? "dropdown-item active"
+                        : "dropdown-item"
+                    }
+                    to="/services/company-formation-services/"
+                  >
+                    Company Formation
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={
+                      page === "feasibility"
+                        ? "dropdown-item active"
+                        : "dropdown-item"
+                    }
+                    to="/services/feasibility-studies-services/"
+                  >
+                    Feasibility Study
                   </Link>
                 </li>
               </ul>

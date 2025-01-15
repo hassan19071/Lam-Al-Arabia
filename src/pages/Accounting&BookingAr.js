@@ -38,7 +38,7 @@ function AccountingABookkeepingAr() {
           content="https://yourwebsite.com/services/accounting-and-bookkeeping-services"
         />
       </Helmet>
-      <NavbarAr />
+      <NavbarAr page="accounting"/>
       <MiniHeroAR title={"خدمات المحاسبة ومسك الدفاتر"} />
       <ServiceDetailsAr
         serviceTitle="خدمات المحاسبة ومسك الدفاتر"

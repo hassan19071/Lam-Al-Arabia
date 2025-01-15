@@ -29,7 +29,7 @@ function FinancialConsulting() {
           content="https://yourwebsite.com/services/financial-consulting"
         />
       </Helmet>
-      <Navbar />
+      <Navbar page="consulting" />
       <MiniHero title="Financial Consulting" />
       <ServiceDetails
         serviceTitle="Financial Consulting Services"

@@ -10,44 +10,46 @@ function Certificate() {
   return (
     <>
       <Helmet>
-        <title>Issuance of Local Content Certificate - Lam Al Arabia</title>
+        <title>
+          Contractor Classification Certificate Issuance Services - Lam Al
+          Arabia
+        </title>
         <meta
           name="description"
-          content="Lam Al Arabia provides end-to-end support for obtaining the Local Content Certificate in Saudi Arabia, helping businesses demonstrate compliance with local content requirements."
+          content="Lam Al Arabia offers comprehensive support for obtaining Contractor Classification Certificates, helping construction companies qualify for high-value projects and government contracts."
         />
         <meta name="robots" content="index, follow" />
         <meta
           property="og:title"
-          content="Issuance of Local Content Certificate - Lam Al Arabia"
+          content="Contractor Classification Certificate Issuance Services - Lam Al Arabia"
         />
         <meta
           property="og:description"
-          content="Get assistance in obtaining the Local Content Certificate and maximize your eligibility for government contracts and incentives with Lam Al Arabia."
+          content="Get expert assistance from Lam Al Arabia in obtaining Contractor Classification Certificates. We ensure a smooth process, helping your company qualify for government and private sector contracts."
         />
-        <meta property="og:image" content="/path-to-your-image.jpg" />{" "}
-        {/* Replace with actual image */}
         <meta
           property="og:url"
-          content="https://yourwebsite.com/services/issuance-of-local-content-certificate"
+          content="https://yourwebsite.com/services/contractor-classification-certificate-issuance"
         />
       </Helmet>
-      <Navbar />
-      <MiniHero title="Issuance of Local Content Certificate" />
+
+      <Navbar page="certificate" />
+      <MiniHero title="Contractor Classification Certificate Issuance" />
       <ServiceDetails
-        serviceTitle="Issuance of Local Content Certificate"
-        briefDescription="Our local content certificate issuance service helps businesses demonstrate compliance with local content requirements in Saudi Arabia. We provide end-to-end support in obtaining the certificate, ensuring that your organization maximizes its local contribution and qualifies for government contracts and incentives."
-        serviceInclude1Title="Assessment of Local Content:"
-        serviceInclude1Description="Evaluating your organization’s local content in terms of goods, services, workforce, and assets to ensure compliance with local content guidelines."
+        serviceTitle="Contractor Classification Certificate Issuance"
+        briefDescription="Our contractor classification certificate issuance service helps construction companies demonstrate their qualifications, financial stability, and technical expertise. We provide end-to-end support to ensure a smooth process, enabling your organization to qualify for government and private sector contracts.Our local content certificate issuance service helps businesses demonstrate compliance with local content requirements in Saudi Arabia. We provide end-to-end support in obtaining the certificate, ensuring that your organization maximizes its local contribution and qualifies for government contracts and incentives."
+        serviceInclude1Title="Company Assessment:"
+        serviceInclude1Description="Evaluating your company's technical, financial, and operational capabilities to meet classification standards."
         serviceInclude2Title="Preparation of Required Documentation:"
-        serviceInclude2Description="Assisting in the preparation and submission of all necessary documentation for the local content certificate."
+        serviceInclude2Description="Assisting with the preparation and submission of all necessary documents for classification certification."
         serviceInclude3Title="Audit Support:"
-        serviceInclude3Description="Providing support during local content audits by government or regulatory authorities."
-        serviceInclude4Title="Consultation on Local Content Optimization:"
-        serviceInclude4Description="Advising on strategies to increase local content and improve your eligibility for future contracts and initiatives."
-        serviceInclude5Title="Periodic Reporting and Compliance Review:"
-        serviceInclude5Description="Offering periodic reviews and reports to ensure continued compliance with local content regulations and standards."
-        whyUsP="Our dedicated team ensures that your organization meets local content guidelines with accuracy and confidentiality. We are committed to maximizing your eligibility for government contracts and initiatives."
-        contactMsg="Contact us today to learn more about how our local content certificate services can support your business growth and success."
+        serviceInclude3Description="Providing guidance during audits by classification authorities to ensure compliance."
+        serviceInclude4Title="Consultation on Classification Improvement:"
+        serviceInclude4Description="Offering advice on improving your classification level for greater eligibility in high-value projects."
+        serviceInclude5Title="Renewal and Periodic Review:"
+        serviceInclude5Description="Assisting with renewal processes and periodic compliance reviews to maintain your classification status."
+        whyUsP="Our expert team ensures accurate, efficient, and confidential handling of your classification needs. We are dedicated to helping you achieve higher project eligibility and enhance your company’s market reputation."
+        contactMsg="Contact us today to learn more about how our contractor classification certificate issuance service can support your business growth."
       />
       <ContactInfo />
       <Footer />

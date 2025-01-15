@@ -39,7 +39,7 @@ function ZakkatATaxAr() {
         />
       </Helmet>
 
-      <NavbarAr />
+      <NavbarAr page="zakat and tax" />
       <MiniHeroAr title="خدمات الزكاة والضرائب" />
       <ServiceDetailsAr
         serviceTitle="خدمات الزكاة والضرائب"

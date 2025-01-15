@@ -38,7 +38,7 @@ function FinancialConsultingAr() {
           content="https://yourwebsite.com/services/financial-consulting"
         />
       </Helmet>
-      <NavbarAr />
+      <NavbarAr page="consulting" />
       <MiniHeroAr title="الاستشارات المالية" />
       <ServiceDetailsAr
         serviceTitle="خدمات الاستشارات المالية"

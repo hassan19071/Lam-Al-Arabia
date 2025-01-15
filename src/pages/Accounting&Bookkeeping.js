@@ -29,7 +29,7 @@ function AccountingABookkeeping() {
           content="https://yourwebsite.com/services/accounting-and-bookkeeping-services"
         />
       </Helmet>
-      <Navbar />
+      <Navbar page="accounting" />
       <MiniHero title={"Accounting And Bookkeeping Services"} />
       <ServiceDetails
         serviceTitle="Accounting And Bookkeeping Services"

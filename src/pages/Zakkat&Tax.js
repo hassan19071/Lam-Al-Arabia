@@ -31,7 +31,7 @@ function ZakkatATax() {
           content="https://yourwebsite.com/services/zakat-and-tax"
         />
       </Helmet>
-      <Navbar />
+      <Navbar page="zakat and tax" />
       <MiniHero title="Zakkat & Tax Services" />
       <ServiceDetails
         serviceTitle="Zakat and Tax Services"

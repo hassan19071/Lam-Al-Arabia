@@ -2,7 +2,10 @@ import React from "react";
 import Accounting from "../assets/accounting.jpeg";
 import Consulting from "../assets/consulting.jpeg";
 import Tax from "../assets/tax.jpeg";
-import Certificate from "../assets/certificate.jpg";
+import Certificate from "../assets/certificate.jpeg";
+import Feasibility from "../assets/feasibility-study.jpeg";
+import Formation from "../assets/company-formation.jpeg";
+import Financing from "../assets/financing.jpeg";
 import { Link } from "react-router-dom";
 import "./style/service.scss";
 
@@ -84,20 +87,66 @@ function ServicesAr() {
               <img
                 loading="lazy"
                 src={Certificate}
-                alt="إصدار شهادة المحتوى المحلي"
+                alt="إصدار شهادة تصنيف المقاولين"
               />
             </div>
             <div className="service-information">
-              <h3>إصدار شهادة المحتوى المحلي</h3>
+              <h3>إصدار شهادة تصنيف المقاولين</h3>
               <p>
-                تهدف هذه الخدمة إلى تقييم نسبة المحتوى المحلي داخل الكيان، مما
-                يمكن من إصدار شهادة المحتوى المحلي. يركز التقييم على المكونات
-                الأساسية للمحتوى المحلي لضمان الامتثال والحصول على الشهادة.
+                نحن نساعد المقاولين في الحصول على شهادات التصنيف الرسمية، مما
+                يضمن تلبيتهم للمعايير الصناعية وتأهيلهم للمشاريع الكبيرة في مجال
+                البناء. تساعد عمليتنا المبسطة في تعزيز المصداقية وتوسيع الفرص
+                التجارية.
               </p>
             </div>
-            <Link to="/ar/خدماتنا/Issuance-of-Local-Content-Certificate">
-              اقرأ المزيد
+            <Link to="/ar/خدماتنا/contractor-classification-certificate-issuance">
+              اعرف المزيد
             </Link>
+          </section>
+
+          <section className="service">
+            <div className="service-img">
+              <img loading="lazy" src={Formation} alt="خدمات تأسيس الشركات" />
+            </div>
+            <div className="service-information">
+              <h3>خدمات تأسيس الشركات</h3>
+              <p>
+                نحن نقدم دعمًا شاملاً لتأسيس الشركات الجديدة، مع التعامل مع جميع
+                المتطلبات القانونية والإدارية والتوثيقية. تضمن خدمتنا عملية
+                تأسيس سلسة، مما يسمح للعملاء بالتركيز على نمو أعمالهم.
+              </p>
+            </div>
+            <Link to="/ar/خدماتنا/company-formation-services/">اعرف المزيد</Link>
+          </section>
+
+          <section className="service">
+            <div className="service-img">
+              <img loading="lazy" src={Financing} alt="خدمات التمويل" />
+            </div>
+            <div className="service-information">
+              <h3>خدمات التمويل</h3>
+              <p>
+                نحن نقدم حلول تمويل مخصصة لدعم مشاريع البناء ونمو الأعمال. تساعد
+                خدمتنا العملاء في الحصول على الأموال اللازمة بشروط مرنة وإرشادات
+                من خبراء.
+              </p>
+            </div>
+            <Link to="/ar/خدماتنا/financing-services/">اعرف المزيد</Link>
+          </section>
+
+          <section className="service">
+            <div className="service-img">
+              <img loading="lazy" src={Feasibility} alt="خدمات دراسات الجدوى" />
+            </div>
+            <div className="service-information">
+              <h3>خدمات دراسات الجدوى</h3>
+              <p>
+                نقوم بإجراء دراسات جدوى مفصلة لتقييم جدوى مشاريع البناء. تغطي
+                تحليلاتنا الجوانب الفنية والمالية والسوقية، مما يساعد العملاء
+                على اتخاذ قرارات مدروسة وتقليل المخاطر.
+              </p>
+            </div>
+            <Link to="/ar/خدماتنا/feasibility-studies-services/">اعرف المزيد</Link>
           </section>
         </div>
       </div>

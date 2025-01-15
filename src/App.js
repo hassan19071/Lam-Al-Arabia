@@ -9,6 +9,12 @@ import AccountingABookkeepingAr from "./pages/Accounting&BookingAr";
 import ZakkatATaxAr from "./pages/Zakat&TaxAr";
 import FinancialConsultingAr from "./pages/FinancialConsultingAr";
 import CertificateAr from "./pages/CertificateAr";
+import Financing from "./pages/Financing";
+import CompanyFormation from "./pages/CompanyFormation";
+import FeasibilityStudy from "./pages/FeasibilityStudy";
+import CompanyFormationAr from "./pages/CompanyFormationAr";
+import FeasibilityStudyAr from "./pages/FeasibilityStudyAr";
+import FinancingAr from "./pages/FinancingAr";
 
 // Lazy load your components
 const HomeEn = lazy(() => import("./pages/HomeEn"));
@@ -59,12 +65,33 @@ function App() {
             element={<FinancialConsultingAr />}
           />
           <Route
-            path="/services/Issuance-of-Local-Content-Certificate"
+            path="/services/contractor-classification-certificate-issuance"
             element={<Certificate />}
           />
           <Route
-            path="/ar/خدماتنا/Issuance-of-Local-Content-Certificate"
+            path="/ar/خدماتنا/contractor-classification-certificate-issuance"
             element={<CertificateAr />}
+          />
+          <Route path="/services/financing-services/" element={<Financing />} />
+          <Route
+            path="ar/خدماتنا/financing-services/"
+            element={<FinancingAr />}
+          />
+          <Route
+            path="/services/company-formation-services/"
+            element={<CompanyFormation />}
+          />
+          <Route
+            path="ar/خدماتنا/company-formation-services/"
+            element={<CompanyFormationAr />}
+          />
+          <Route
+            path="/services/feasibility-studies-services/"
+            element={<FeasibilityStudy />}
+          />
+          <Route
+            path="ar/خدماتنا/feasibility-studies-services/"
+            element={<FeasibilityStudyAr />}
           />
           <Route path="/contact-us" element={<ContactEn />} />
           <Route path="ar/تواصل-معنا" element={<ContactPageAr />} />

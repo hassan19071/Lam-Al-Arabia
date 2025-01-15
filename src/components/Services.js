@@ -2,7 +2,10 @@ import React from "react";
 import Accounting from "../assets/accounting.jpeg";
 import Consulting from "../assets/consulting.jpeg";
 import Tax from "../assets/tax.jpeg";
-import Certificate from "../assets/certificate.jpg";
+import Certificate from "../assets/certificate.jpeg";
+import Feasibility from "../assets/feasibility-study.jpeg";
+import Formation from "../assets/company-formation.jpeg";
+import Financing from "../assets/financing.jpeg";
 import { Link } from "react-router-dom";
 import "./style/service.scss";
 
@@ -93,15 +96,69 @@ function Services() {
               />
             </div>
             <div className="service-information">
-              <h3>Issuance of Local Content Certificate</h3>
+              <h3>Contractor Classification Certificate Issuance</h3>
               <p>
-                This service is designed to assess the proportion of local
-                content within an entity, enabling the issuance of a Local
-                Content Certificate. The process focuses on evaluating key local
-                content components to ensure compliance and certification.
+              We assist contractors in obtaining official classification certificates, ensuring they meet industry standards and qualify for major construction projects. Our streamlined process helps boost credibility and expand business opportunities.
               </p>
             </div>
-            <Link to="/services/Issuance-of-Local-Content-Certificate">
+            <Link to="/services/contractor-classification-certificate-issuance">
+              Learn More
+            </Link>
+          </section>
+
+          <section className="service">
+            <div className="service-img">
+              <img
+                loading="lazy"
+                src={Formation}
+                alt="Company Formation Services"
+              />
+            </div>
+            <div className="service-information">
+              <h3>Company Formation Services</h3>
+              <p>
+              We provide comprehensive support for establishing new companies, handling all legal, administrative, and documentation requirements. Our service ensures a smooth setup process, allowing clients to focus on growing their business.
+              </p>
+            </div>
+            <Link to="/services/company-formation-services/">
+              Learn More
+            </Link>
+          </section>
+
+          <section className="service">
+            <div className="service-img">
+              <img
+                loading="lazy"
+                src={Financing}
+                alt="Financing Services"
+              />
+            </div>
+            <div className="service-information">
+              <h3>Financing Services</h3>
+              <p>
+              We offer tailored financing solutions to support construction projects and business growth. Our service helps clients secure the necessary funds with flexible terms and expert guidance.
+              </p>
+            </div>
+            <Link to="/services/financing-services/">
+              Learn More
+            </Link>
+          </section>
+
+          <section className="service">
+            <div className="service-img">
+              <img
+                loading="lazy"
+                src={Feasibility}
+                alt="feasibility studies services"
+              />
+            </div>
+            <div className="service-information">
+              <h3>Feasibility Studies Services</h3>
+              <p>
+              We conduct detailed feasibility studies to assess the viability of construction projects. Our analysis covers technical, financial, and market aspects, helping clients make informed decisions and minimize risks.
+              </p>
+            </div>
+            <Link to="/services/feasibility-studies-services/">
               Learn More
             </Link>
           </section>
