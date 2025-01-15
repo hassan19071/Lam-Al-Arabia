@@ -19,24 +19,57 @@ function Contact() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Basic validation
+    // Check if any required field is empty
     if (!formData.name || !formData.email || !formData.subject) {
-      setMessageStatus("Please fill out all required fields.");
-      return;
+      setMessageStatus("Please fill in all required fields.");
+      return; // Prevent form submission if validation fails
     }
 
-    // Simulate form submission success
-    setMessageStatus("Message sent successfully!");
-    // Reset form after submission
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
+    // Structure the data into a formatted message body using formData from React state
+    const messageBody = `
+      Full Name: ${formData.name}
+      Email: ${formData.email}
+      Subject: ${formData.subject}
+      Message: ${formData.message}
+    `;
+
+    // Create new FormData to append the message body and access key
+    const formDataToSubmit = new FormData();
+    formDataToSubmit.append("name", formData.name);
+    formDataToSubmit.append("email", formData.email);
+    formDataToSubmit.append("subject", formData.subject);
+    formDataToSubmit.append("message", messageBody);
+    formDataToSubmit.append(
+      "access_key",
+      "0cb06e29-f723-4c5e-9d4e-6c5d662a85c1"
+    );
+
+    // Send the form data to Web3Forms API
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formDataToSubmit,
     });
+
+    const data = await response.json();
+
+    // Handle success or failure based on Web3Forms response
+    if (data.success) {
+      setMessageStatus("Message sent successfully!");
+      // Reset form fields after submission
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } else {
+      setMessageStatus(
+        "There was an error submitting the form. Please try again."
+      );
+    }
   };
 
   return (
@@ -59,6 +92,7 @@ function Contact() {
                     Full Name<span>*</span>
                   </label>
                   <input
+                    required
                     autoComplete="on"
                     type="text"
                     className="form-control"
@@ -72,6 +106,7 @@ function Contact() {
                     Email<span>*</span>
                   </label>
                   <input
+                    required
                     autoComplete="on"
                     type="email"
                     className="form-control"
@@ -85,6 +120,7 @@ function Contact() {
                     Subject<span>*</span>
                   </label>
                   <input
+                    required
                     autoComplete="on"
                     type="text"
                     className="form-control"
