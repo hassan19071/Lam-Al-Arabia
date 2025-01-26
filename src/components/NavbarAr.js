@@ -6,7 +6,7 @@ import "./style/navbar.scss";
 
 function NavbarAr({ page }) {
   return (
-    <nav className="navbar navbar-expand-lg bg-white py-0">
+    <nav className="navbar navbar-expand-lg bg-white py-2">
       <div className="container">
         <Link className="navbar-brand ms-lg-2" to="/ar">
           <img

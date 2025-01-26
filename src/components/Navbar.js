@@ -6,7 +6,7 @@ import "./style/navbar.scss";
 
 function Navbar({ page }) {
   return (
-    <nav className="navbar navbar-expand-lg bg-white py-0">
+    <nav className="navbar navbar-expand-lg bg-white py-2">
       <div className="container">
         <Link className="navbar-brand me-lg-2" to="/">
           <img
