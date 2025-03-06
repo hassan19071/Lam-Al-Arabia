@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import MiniHero from "../components/MiniHero";
 import ContactInfo from "../components/ContactInfo";
@@ -6,6 +6,10 @@ import Footer from "../components/Footer";
 import { Helmet } from "react-helmet";
 import "../components/style/service-details.scss";
 function AccountsSystemsStructuring() {
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Helmet>

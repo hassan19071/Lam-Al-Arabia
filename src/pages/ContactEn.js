@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import MiniHero from "../components/MiniHero";
 import ContactInfo from "../components/ContactInfo";
@@ -7,6 +7,10 @@ import Contact from "../components/Contact";
 import { Helmet } from "react-helmet"; // Import React Helmet
 
 function ContactEn() {
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Helmet>

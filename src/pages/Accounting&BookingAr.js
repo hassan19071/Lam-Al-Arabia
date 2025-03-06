@@ -7,17 +7,18 @@ import { Helmet } from "react-helmet"; // Import React Helmet
 import ServiceDetailsAr from "../components/ServicesDetailsAr";
 
 function AccountingABookkeepingAr() {
-    useEffect(() => {
-        // Set the page direction to RTL when this component is rendered
-        document.body.dir = "rtl";
-        document.documentElement.lang = "ar";
-    
-        // Cleanup when the component is unmounted (if you use this approach for switching pages)
-        return () => {
-          document.body.dir = "ltr"; // Revert back to LTR if needed
-          document.documentElement.lang = "en";
-        };
-      }, []);
+  useEffect(() => {
+    // Set the page direction to RTL when this component is rendered
+    document.body.dir = "rtl";
+    document.documentElement.lang = "ar";
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+    // Cleanup when the component is unmounted (if you use this approach for switching pages)
+    return () => {
+      document.body.dir = "ltr"; // Revert back to LTR if needed
+      document.documentElement.lang = "en";
+    };
+  }, []);
   return (
     <>
       <Helmet>
@@ -40,7 +41,7 @@ function AccountingABookkeepingAr() {
           content="https://yourwebsite.com/services/accounting-and-bookkeeping-services"
         />
       </Helmet>
-      <NavbarAr page="accounting"/>
+      <NavbarAr page="accounting" />
       <MiniHeroAR title={"خدمات المحاسبة ومسك الدفاتر"} />
       <ServiceDetailsAr
         serviceTitle="خدمات المحاسبة ومسك الدفاتر"

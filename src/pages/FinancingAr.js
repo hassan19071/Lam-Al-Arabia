@@ -11,7 +11,8 @@ function FinancingAr() {
     // Set the page direction to RTL when this component is rendered
     document.body.dir = "rtl";
     document.documentElement.lang = "ar";
-
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
     // Cleanup when the component is unmounted (if you use this approach for switching pages)
     return () => {
       document.body.dir = "ltr"; // Revert back to LTR if needed
@@ -39,7 +40,7 @@ function FinancingAr() {
       </Helmet>
 
       <NavbarAr page="financing" />
-      <MiniHeroAr title= "خدمات التمويل" />
+      <MiniHeroAr title="خدمات التمويل" />
       <ServiceDetailsAr
         serviceTitle="خدمات التمويل"
         briefDescription="تساعد خدمات التمويل لدينا الشركات الإنشائية والأعمال في تأمين التمويل الذي يحتاجونه لتنفيذ المشاريع والنمو. نحن نقدم دعمًا شاملاً، مقدمين حلول تمويل مخصصة تلبي احتياجاتك الخاصة وتحسن تدفقك النقدي."

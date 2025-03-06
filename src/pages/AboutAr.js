@@ -12,6 +12,8 @@ function AboutAr() {
     document.body.dir = "rtl";
     document.documentElement.lang = "ar";
 
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
     // Cleanup when the component is unmounted (if you use this approach for switching pages)
     return () => {
       document.body.dir = "ltr"; // Revert back to LTR if needed

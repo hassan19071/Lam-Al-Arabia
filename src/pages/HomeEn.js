@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import About from "../components/About";
@@ -10,6 +10,10 @@ import Footer from "../components/Footer";
 import { Helmet } from "react-helmet";
 
 function HomeEn() {
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Helmet>
