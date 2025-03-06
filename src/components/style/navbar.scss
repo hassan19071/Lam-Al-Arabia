@@ -49,10 +49,13 @@
 
   .navbar-brand {
     img {
-      width: 80%; /* Makes the logo width responsive */
+      width: 70%; /* Makes the logo width responsive */
       max-width: 200px; /* Maximum width to ensure the logo doesn’t get too big */
       min-width: 100px; /* Minimum width to ensure the logo doesn’t get too small */
       height: auto;
+      @media (max-width:991px) {
+        width: 60%;
+      }
     }
   }
   .nav-item {
