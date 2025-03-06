@@ -6,6 +6,7 @@ import Certificate from "../assets/certificate.jpeg";
 import Feasibility from "../assets/feasibility-study.jpeg";
 import Formation from "../assets/company-formation.jpeg";
 import Financing from "../assets/financing.jpeg";
+import AccountingSystems from "../assets/Accounts & Systems Structuring.jpeg";
 import { Link } from "react-router-dom";
 import "./style/service.scss";
 
@@ -116,7 +117,9 @@ function ServicesAr() {
                 تأسيس سلسة، مما يسمح للعملاء بالتركيز على نمو أعمالهم.
               </p>
             </div>
-            <Link to="/ar/خدماتنا/company-formation-services/">اعرف المزيد</Link>
+            <Link to="/ar/خدماتنا/company-formation-services/">
+              اعرف المزيد
+            </Link>
           </section>
 
           <section className="service">
@@ -146,7 +149,29 @@ function ServicesAr() {
                 على اتخاذ قرارات مدروسة وتقليل المخاطر.
               </p>
             </div>
-            <Link to="/ar/خدماتنا/feasibility-studies-services/">اعرف المزيد</Link>
+            <Link to="/ar/خدماتنا/feasibility-studies-services/">
+              اعرف المزيد
+            </Link>
+          </section>
+          <section className="service">
+            <div className="service-img">
+              <img
+                loading="lazy"
+                src={AccountingSystems}
+                alt="خدمة هيكلة الحسابات والأنظمة"
+              />
+            </div>
+            <div className="service-information">
+              <h3>خدمة هيكلة الحسابات والأنظمة</h3>
+              <p>
+                نضمن تنظيمًا ماليًا فعالًا من خلال إعداد الحسابات، وتطوير
+                الأنظمة، وتعزيز التقارير لمساعدة الشركات على تحسين العمليات
+                واتخاذ قرارات مستنيرة.
+              </p>
+            </div>
+            <Link to="/ar/خدماتنا/accounts-systems-structuring/">
+              اعرف المزيد
+            </Link>
           </section>
         </div>
       </div>

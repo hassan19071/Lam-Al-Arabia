@@ -6,6 +6,7 @@ import Certificate from "../assets/certificate.jpeg";
 import Feasibility from "../assets/feasibility-study.jpeg";
 import Formation from "../assets/company-formation.jpeg";
 import Financing from "../assets/financing.jpeg";
+import AccountingSystems from "../assets/Accounts & Systems Structuring.jpeg";
 import { Link } from "react-router-dom";
 import "./style/service.scss";
 
@@ -98,7 +99,10 @@ function Services() {
             <div className="service-information">
               <h3>Contractor Classification Certificate Issuance</h3>
               <p>
-              We assist contractors in obtaining official classification certificates, ensuring they meet industry standards and qualify for major construction projects. Our streamlined process helps boost credibility and expand business opportunities.
+                We assist contractors in obtaining official classification
+                certificates, ensuring they meet industry standards and qualify
+                for major construction projects. Our streamlined process helps
+                boost credibility and expand business opportunities.
               </p>
             </div>
             <Link to="/services/contractor-classification-certificate-issuance">
@@ -117,31 +121,28 @@ function Services() {
             <div className="service-information">
               <h3>Company Formation Services</h3>
               <p>
-              We provide comprehensive support for establishing new companies, handling all legal, administrative, and documentation requirements. Our service ensures a smooth setup process, allowing clients to focus on growing their business.
+                We provide comprehensive support for establishing new companies,
+                handling all legal, administrative, and documentation
+                requirements. Our service ensures a smooth setup process,
+                allowing clients to focus on growing their business.
               </p>
             </div>
-            <Link to="/services/company-formation-services/">
-              Learn More
-            </Link>
+            <Link to="/services/company-formation-services/">Learn More</Link>
           </section>
 
           <section className="service">
             <div className="service-img">
-              <img
-                loading="lazy"
-                src={Financing}
-                alt="Financing Services"
-              />
+              <img loading="lazy" src={Financing} alt="Financing Services" />
             </div>
             <div className="service-information">
               <h3>Financing Services</h3>
               <p>
-              We offer tailored financing solutions to support construction projects and business growth. Our service helps clients secure the necessary funds with flexible terms and expert guidance.
+                We offer tailored financing solutions to support construction
+                projects and business growth. Our service helps clients secure
+                the necessary funds with flexible terms and expert guidance.
               </p>
             </div>
-            <Link to="/services/financing-services/">
-              Learn More
-            </Link>
+            <Link to="/services/financing-services/">Learn More</Link>
           </section>
 
           <section className="service">
@@ -155,12 +156,31 @@ function Services() {
             <div className="service-information">
               <h3>Feasibility Studies Services</h3>
               <p>
-              We conduct detailed feasibility studies to assess the viability of construction projects. Our analysis covers technical, financial, and market aspects, helping clients make informed decisions and minimize risks.
+                We conduct detailed feasibility studies to assess the viability
+                of construction projects. Our analysis covers technical,
+                financial, and market aspects, helping clients make informed
+                decisions and minimize risks.
               </p>
             </div>
-            <Link to="/services/feasibility-studies-services/">
-              Learn More
-            </Link>
+            <Link to="/services/feasibility-studies-services/">Learn More</Link>
+          </section>
+          <section className="service">
+            <div className="service-img">
+              <img
+                loading="lazy"
+                src={AccountingSystems}
+                alt="accounts & systems structuring service"
+              />
+            </div>
+            <div className="service-information">
+              <h3>Accounts & Systems Structuring Service</h3>
+              <p>
+                We ensure efficient financial organization by setting up
+                accounts, developing systems, and enhancing reporting to help
+                businesses optimize operations and make informed decisions.
+              </p>
+            </div>
+            <Link to="/services/accounts-systems-structuring/">Learn More</Link>
           </section>
         </div>
       </div>

@@ -1,11 +1,10 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import MiniHero from "../components/MiniHero";
-import ServiceDetails from "../components/ServiceDetails";
 import ContactInfo from "../components/ContactInfo";
 import Footer from "../components/Footer";
-import { Helmet } from "react-helmet"; // Import React Helmet
-
+import { Helmet } from "react-helmet";
+import "../components/style/service-details.scss";
 function FinancialConsulting() {
   return (
     <>
@@ -29,24 +28,67 @@ function FinancialConsulting() {
           content="https://yourwebsite.com/services/financial-consulting"
         />
       </Helmet>
+
       <Navbar page="consulting" />
-      <MiniHero title="Financial Consulting" />
-      <ServiceDetails
-        serviceTitle="Financial Consulting Services"
-        briefDescription="Our financial consulting services aim to help businesses achieve financial stability, growth, and strategic planning. We offer expert guidance and customized solutions to improve financial performance and enhance decision-making capabilities."
-        serviceInclude1Title="Financial Strategy Development:"
-        serviceInclude1Description="Assisting in the creation of long-term financial strategies that align with business goals and market conditions."
-        serviceInclude2Title="Budgeting and Forecasting:"
-        serviceInclude2Description="Helping organizations develop detailed budgets and accurate financial forecasts to ensure effective resource allocation."
-        serviceInclude3Title="Cost Control and Profitability Analysis:"
-        serviceInclude3Description="Analyzing cost structures and identifying areas for cost reduction to enhance profitability."
-        serviceInclude4Title="Cash Flow Management:"
-        serviceInclude4Description="Providing strategies for effective cash flow management to ensure liquidity and operational efficiency."
-        serviceInclude5Title="Risk Management:"
-        serviceInclude5Description="Identifying financial risks and developing mitigation strategies to protect the organization’s financial health."
-        whyUsP="Our dedicated team ensures your financial data is handled with the utmost accuracy and confidentiality. We are committed to helping you achieve financial clarity and improve operational efficiency."
-        contactMsg="Contact us today to learn more about how our accounting, bookkeeping, zakat, tax, and financial consulting services can support your business growth and success."
-      />
+      <MiniHero title="Financial Consulting Services" />
+
+      <div className="container mx-auto px-lg-5 py-5 service-details">
+        <h2 className="text-3xl font-bold mb-4">
+          Financial Consulting Services
+        </h2>
+        <p className="mb-6">
+          Our financial consulting services aim to help businesses achieve
+          financial stability, growth, and strategic planning. We offer expert
+          guidance and customized solutions to improve financial performance and
+          enhance decision-making capabilities.
+        </p>
+        <h3>Our Comprehensive Services</h3>
+        <ul className="space-y-4 list-disc pl-5">
+          <li>
+            <strong>Financial Strategy Development:</strong> Assisting in the
+            creation of long-term financial strategies that align with business
+            goals and market conditions.
+          </li>
+          <li>
+            <strong>Budgeting and Forecasting:</strong> Helping organizations
+            develop detailed budgets and accurate financial forecasts to ensure
+            effective resource allocation.
+          </li>
+          <li>
+            <strong>Cost Control and Profitability Analysis:</strong> Analyzing
+            cost structures and identifying areas for cost reduction to enhance
+            profitability.
+          </li>
+          <li>
+            <strong>Cash Flow Management:</strong> Providing strategies for
+            effective cash flow management to ensure liquidity and operational
+            efficiency.
+          </li>
+          <li>
+            <strong>Risk Management:</strong> Identifying financial risks and
+            developing mitigation strategies to protect the organization’s
+            financial health.
+          </li>
+        </ul>
+
+        <div className="mt-8">
+          <h3 className="text-2xl font-bold">Why Choose Us?</h3>
+          <p className="mt-2">
+            Our dedicated team ensures your financial data is handled with the
+            utmost accuracy and confidentiality. We are committed to helping you
+            achieve financial clarity and improve operational efficiency.
+          </p>
+        </div>
+
+        <div className="mt-6">
+          <p className="font-semibold">
+            Contact us today to learn more about how our accounting,
+            bookkeeping, zakat, tax, and financial consulting services can
+            support your business growth and success.
+          </p>
+        </div>
+      </div>
+
       <ContactInfo />
       <Footer />
     </>

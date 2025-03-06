@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Loading from "./components/Loading";
 import HomeAr from "./pages/HomeAr";
 import AboutAr from "./pages/AboutAr";
@@ -15,6 +15,8 @@ import FeasibilityStudy from "./pages/FeasibilityStudy";
 import CompanyFormationAr from "./pages/CompanyFormationAr";
 import FeasibilityStudyAr from "./pages/FeasibilityStudyAr";
 import FinancingAr from "./pages/FinancingAr";
+import AccountsSystemsStructuring from "./pages/Accounts&SystemsStructuring";
+import AccountsSystemsStructuringAr from "./pages/Accounts&SystemsStructuringAr";
 
 // Lazy load your components
 const HomeEn = lazy(() => import("./pages/HomeEn"));
@@ -30,7 +32,7 @@ const Certificate = lazy(() => import("./pages/Certificate"));
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route exact path="/" element={<HomeEn />} />
@@ -74,7 +76,7 @@ function App() {
           />
           <Route path="/services/financing-services/" element={<Financing />} />
           <Route
-            path="ar/خدماتنا/financing-services/"
+            path="/ar/خدماتنا/financing-services/"
             element={<FinancingAr />}
           />
           <Route
@@ -82,7 +84,7 @@ function App() {
             element={<CompanyFormation />}
           />
           <Route
-            path="ar/خدماتنا/company-formation-services/"
+            path="/ar/خدماتنا/company-formation-services/"
             element={<CompanyFormationAr />}
           />
           <Route
@@ -90,14 +92,22 @@ function App() {
             element={<FeasibilityStudy />}
           />
           <Route
-            path="ar/خدماتنا/feasibility-studies-services/"
+            path="/ar/خدماتنا/feasibility-studies-services/"
             element={<FeasibilityStudyAr />}
           />
+          <Route
+            path="/services/accounts-systems-structuring/"
+            element={<AccountsSystemsStructuring />}
+          />
+          <Route
+            path="/ar/خدماتنا/accounts-systems-structuring/"
+            element={<AccountsSystemsStructuringAr />}
+          />
           <Route path="/contact-us" element={<ContactEn />} />
-          <Route path="ar/تواصل-معنا" element={<ContactPageAr />} />
+          <Route path="/ar/تواصل-معنا" element={<ContactPageAr />} />
         </Routes>
       </Suspense>
-    </BrowserRouter>
+    </Router>
   );
 }
 

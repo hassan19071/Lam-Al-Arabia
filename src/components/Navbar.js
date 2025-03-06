@@ -138,6 +138,18 @@ function Navbar({ page }) {
                     Feasibility Study
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    className={
+                      page === "accounts-systems-structuring"
+                        ? "dropdown-item active"
+                        : "dropdown-item"
+                    }
+                    to="/services/accounts-systems-structuring/"
+                  >
+                    Accounts & Systems Structuring
+                  </Link>
+                </li>
               </ul>
             </li>
             <li className="nav-item mt-lg-0 mt-1">

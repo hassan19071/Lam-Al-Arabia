@@ -1,11 +1,10 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import MiniHero from "../components/MiniHero";
-import ServiceDetails from "../components/ServiceDetails";
 import ContactInfo from "../components/ContactInfo";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet"; // Import React Helmet
-
+import "../components/style/service-details.scss";
 function CompanyFormation() {
   return (
     <>
@@ -32,22 +31,58 @@ function CompanyFormation() {
 
       <Navbar page="company" />
       <MiniHero title="Company Formation Services" />
-      <ServiceDetails
-        serviceTitle="company formation Services"
-        briefDescription="Our company formation services provide complete support for establishing new businesses, ensuring a hassle-free setup process. From legal registration to administrative procedures, we handle every step to help you launch your company quickly and efficiently."
-        serviceInclude1Title="Business Structure Consultation:"
-        serviceInclude1Description="Advising on the best legal structure (LLC, joint-stock, etc.) to fit your business goals."
-        serviceInclude2Title="Legal Registration Support:"
-        serviceInclude2Description="Assisting with business registration, licensing, and compliance with local regulations."
-        serviceInclude3Title="Document Preparation:"
-        serviceInclude3Description="Preparing and submitting all required documentation for company formation."
-        serviceInclude4Title="Bank Account Setup:"
-        serviceInclude4Description="Facilitating the opening of corporate bank accounts."
-        serviceInclude5Title="Post-Formation Services:"
-        serviceInclude5Description="Offering continued support with ongoing regulatory compliance and reporting."
-        whyUsP="With our expertise and personalized approach, we ensure a smooth company formation process, saving you time and effort. Our goal is to help you focus on building and growing your business from day one."
-        contactMsg="Contact us today to learn more about our company formation services and how we can help bring your business vision to life."
-      />
+
+      <div className="container mx-auto px-lg-5 py-5 service-details">
+        <h2 className="text-3xl font-bold mb-4">Company Formation Services</h2>
+        <p className="mb-6">
+          Our company formation services provide complete support for
+          establishing new businesses, ensuring a hassle-free setup process.
+          From legal registration to administrative procedures, we handle every
+          step to help you launch your company quickly and efficiently.
+        </p>
+        <h3>Our Comprehensive Services</h3>
+        <ul className="space-y-4 list-disc pl-5">
+          <li>
+            <strong>Business Structure Consultation:</strong> Advising on the
+            best legal structure (LLC, joint-stock, etc.) to fit your business
+            goals.
+          </li>
+          <li>
+            <strong>Legal Registration Support:</strong> Assisting with business
+            registration, licensing, and compliance with local regulations.
+          </li>
+          <li>
+            <strong>Document Preparation:</strong> Preparing and submitting all
+            required documentation for company formation.
+          </li>
+          <li>
+            <strong>Bank Account Setup:</strong> Facilitating the opening of
+            corporate bank accounts.
+          </li>
+          <li>
+            <strong>Post-Formation Services:</strong> Offering continued support
+            with ongoing regulatory compliance and reporting.
+          </li>
+        </ul>
+
+        <div className="mt-8">
+          <h3 className="text-2xl font-bold">Why Choose Us?</h3>
+          <p className="mt-2">
+            With our expertise and personalized approach, we ensure a smooth
+            company formation process, saving you time and effort. Our goal is
+            to help you focus on building and growing your business from day
+            one.
+          </p>
+        </div>
+
+        <div className="mt-6">
+          <p className="font-semibold">
+            Contact us today to learn more about our company formation services
+            and how we can help bring your business vision to life.
+          </p>
+        </div>
+      </div>
+
       <ContactInfo />
       <Footer />
     </>

@@ -37,7 +37,7 @@ function HeroSectionAr() {
                 التحديات المعقدة، نحن شريكك الموثوق.
               </p>
               <Link to="/ar/تواصل-معنا">
-              تواصل معنا <i className="fa-solid fa-angles-left"></i>
+                تواصل معنا <i className="fa-solid fa-angles-left"></i>
               </Link>
             </div>
           </div>
@@ -63,7 +63,7 @@ function HeroSectionAr() {
                 مستقبلك.
               </p>
               <Link to="/ar/تواصل-معنا">
-                 تواصل معنا <i className="fa-solid fa-angles-left"></i>
+                تواصل معنا <i className="fa-solid fa-angles-left"></i>
               </Link>
             </div>
           </div>

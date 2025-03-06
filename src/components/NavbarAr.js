@@ -61,7 +61,11 @@ function NavbarAr({ page }) {
               <ul className="dropdown-menu text-end">
                 <li>
                   <Link
-                    className={page === "accounting"?"dropdown-item active":"dropdown-item"}
+                    className={
+                      page === "accounting"
+                        ? "dropdown-item active"
+                        : "dropdown-item"
+                    }
                     to="/ar/خدماتنا/accounting-and-bookkeeping-services"
                   >
                     خدمات المحاسبة ومسك الدفاتر
@@ -69,7 +73,11 @@ function NavbarAr({ page }) {
                 </li>
                 <li>
                   <Link
-                    className={page === "zakat and tax"?"dropdown-item active":"dropdown-item"}
+                    className={
+                      page === "zakat and tax"
+                        ? "dropdown-item active"
+                        : "dropdown-item"
+                    }
                     to="/ar/خدماتنا/zakkat-and-tax-services"
                   >
                     خدمات الزكاة والضرائب
@@ -77,7 +85,11 @@ function NavbarAr({ page }) {
                 </li>
                 <li>
                   <Link
-                    className={page === "consulting"?"dropdown-item active":"dropdown-item"}
+                    className={
+                      page === "consulting"
+                        ? "dropdown-item active"
+                        : "dropdown-item"
+                    }
                     to="/ar/خدماتنا/financial-consulting"
                   >
                     الاستشارات المالية
@@ -85,7 +97,11 @@ function NavbarAr({ page }) {
                 </li>
                 <li>
                   <Link
-                    className={page === "certificate"?"dropdown-item active":"dropdown-item"}
+                    className={
+                      page === "certificate"
+                        ? "dropdown-item active"
+                        : "dropdown-item"
+                    }
                     to="/ar/خدماتنا/contractor-classification-certificate-issuance/"
                   >
                     إصدار شهادة تصنيف المقاولين
@@ -93,7 +109,11 @@ function NavbarAr({ page }) {
                 </li>
                 <li>
                   <Link
-                    className={page === "company"?"dropdown-item active":"dropdown-item"}
+                    className={
+                      page === "company"
+                        ? "dropdown-item active"
+                        : "dropdown-item"
+                    }
                     to="/ar/خدماتنا/company-formation-services/"
                   >
                     تأسيس الشركات
@@ -101,7 +121,11 @@ function NavbarAr({ page }) {
                 </li>
                 <li>
                   <Link
-                    className={page === "financing"?"dropdown-item active":"dropdown-item"}
+                    className={
+                      page === "financing"
+                        ? "dropdown-item active"
+                        : "dropdown-item"
+                    }
                     to="/ar/خدماتنا/financing-services/"
                   >
                     خدمات التمويل
@@ -109,10 +133,26 @@ function NavbarAr({ page }) {
                 </li>
                 <li>
                   <Link
-                    className={page === "feasibility"?"dropdown-item active":"dropdown-item"}
+                    className={
+                      page === "feasibility"
+                        ? "dropdown-item active"
+                        : "dropdown-item"
+                    }
                     to="/ar/خدماتنا/feasibility-studies-services/"
                   >
                     دراسات الجدوى
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={
+                      page === "accounts-systems-structuring"
+                        ? "dropdown-item active"
+                        : "dropdown-item"
+                    }
+                    to="/ar/خدماتنا/accounts-systems-structuring/"
+                  >
+                    هيكلة الحسابات والأنظمة
                   </Link>
                 </li>
               </ul>
