@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import EnglishIcon from "../assets/english.png";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/lam logo.png";
 import "./style/navbar.scss";
 
 function NavbarAr({ page }) {
@@ -176,8 +176,8 @@ function NavbarAr({ page }) {
             <Link className="nav-link ms-4 contact" to="/ar/تواصل-معنا">
               تواصل معنا
             </Link>
-            <Link className="nav-link phone text-left" to="tel:+966536477046">
-              0536477046 <i className="fa-solid fa-phone"></i>
+            <Link className="nav-link phone text-left" to="tel:+966593072004">
+              0593072004 <i className="fa-solid fa-phone"></i>
             </Link>
           </div>
         </div>

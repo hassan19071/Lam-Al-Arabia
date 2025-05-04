@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ArabicIcon from "../assets/arabic.png";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/lam logo.png";
 import "./style/navbar.scss";
 
 function Navbar({ page }) {
@@ -171,8 +171,8 @@ function Navbar({ page }) {
             <Link className="nav-link me-4 contact" to="/contact-us">
               Contact Us
             </Link>
-            <Link className="nav-link phone" to="tel:+966536477046">
-              <i className="fa-solid fa-phone"></i> +966 53 647 7046
+            <Link className="nav-link phone" to="tel:+966593072004">
+              <i className="fa-solid fa-phone"></i> +966 59 307 2004
             </Link>
           </div>
         </div>

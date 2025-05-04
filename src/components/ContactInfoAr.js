@@ -25,7 +25,7 @@ function ContactInfoAr() {
             <div className="text-info">
               <h4>اتصل بنا</h4>
               <span>
-                <Link to="tel:+966536477046">0536477046</Link>
+                <Link to="tel:+966593072004">0593072004</Link>
               </span>
             </div>
           </div>
