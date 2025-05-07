@@ -29,6 +29,7 @@ function HomeEn() {
           content="Lam Al Arabia Professional Consulting provides business consulting services, focusing on strategic planning, operational optimization, and financial growth."
         />
         <meta property="og:url" content="https://yourwebsite.com" />
+        <meta name="keywords" content="Lam Al Arabia Professional Consulting,Financial, Administrative Consulting Saudi Arabia,Multidisciplinary consulting firm Dammam & Khoba,Best professional consulting company in Saudi Arabia"/>
       </Helmet>
       <Navbar page="home" />
       <HeroSection />

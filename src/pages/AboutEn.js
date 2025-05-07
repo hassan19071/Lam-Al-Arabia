@@ -27,6 +27,7 @@ function AboutEn() {
           content="Lam Al Arabia provides tailored business solutions across industries, helping businesses grow, optimize operations, and navigate challenges."
         />
         <meta property="og:url" content="https://yourwebsite.com/about-us" />
+        <meta name="keywords" content="About Lam Al Arabia Professional Consulting,Experts in financial, administrative consultancy,Who we are – Lam Al Arabia,Trusted professional consulting firm in Saudi Arabia"/>
       </Helmet>
       <Navbar page="about" />
       <MiniHero title="About Us" />
