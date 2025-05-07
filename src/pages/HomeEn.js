@@ -20,13 +20,13 @@ function HomeEn() {
         <title>Home - Lam Al Arabia Professional Consulting</title>
         <meta
           name="description"
-          content="Lam Al Arabia offers expert consulting services tailored to help businesses grow and optimize operations. Explore our services and solutions."
+          content="Lam Al Arabia Professional Consulting offers expert consulting services tailored to help businesses grow and optimize operations. Explore our services and solutions."
         />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Home - Lam Al Arabia" />
         <meta
           property="og:description"
-          content="Lam Al Arabia provides business consulting services, focusing on strategic planning, operational optimization, and financial growth."
+          content="Lam Al Arabia Professional Consulting provides business consulting services, focusing on strategic planning, operational optimization, and financial growth."
         />
         <meta property="og:url" content="https://yourwebsite.com" />
       </Helmet>
