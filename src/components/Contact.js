@@ -44,7 +44,7 @@ function Contact() {
     formDataToSubmit.append("message", messageBody);
     formDataToSubmit.append(
       "access_key",
-      "0cb06e29-f723-4c5e-9d4e-6c5d662a85c1"
+      "79a76fc0-51dd-4c18-9f7b-62d6ca5a126e"
     );
 
     // Send the form data to Web3Forms API
@@ -58,6 +58,17 @@ function Contact() {
     // Handle success or failure based on Web3Forms response
     if (data.success) {
       setMessageStatus("Message sent successfully!");
+
+      //code conversion from google ads
+      if (window.gtag) {
+        window.gtag('event', 'conversion', {
+          send_to: 'AW-17057790080/xxxxxxxxxxxxx',
+          value: 0.00,
+          currency: 'SAR'
+        });
+      }
+
+
       // Reset form fields after submission
       setFormData({
         name: "",
