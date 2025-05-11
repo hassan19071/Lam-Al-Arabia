@@ -1,12 +1,14 @@
-import React, { useEffect } from "react";
-import NavbarAr from "../components/NavbarAr";
-import ContactInfoAr from "../components/ContactInfoAr";
-import FooterAr from "../components/FooterAr";
-import MiniHeroAr from "../components/MiniHeroAr";
-import WhyUsAr from "../components/WhyUsAr";
-import ServicesAr from "../components/ServicesAr";
+import React, { useEffect, Suspense } from "react";
 import { Helmet } from "react-helmet";
 
+// Lazy load components
+const NavbarAr = React.lazy(() => import("../components/NavbarAr"));
+const MiniHeroAr = React.lazy(() => import("../components/MiniHeroAr"));
+const ServicesAr = React.lazy(() => import("../components/ServicesAr"));
+const WhyUsAr = React.lazy(() => import("../components/WhyUsAr"));
+const ContactInfoAr = React.lazy(() => import("../components/ContactInfoAr"));
+const FooterAr = React.lazy(() => import("../components/FooterAr"));
+const Loading = React.lazy(()=> import("../components/Loading"));
 function ServicesPageAr() {
   useEffect(() => {
     // Set the page direction to RTL when this component is rendered
@@ -39,12 +41,15 @@ function ServicesPageAr() {
         <meta name="keywords" content="الاستشارات المالية,خدمات الزكاة والضرائب,إصدار شهادة تصنيف المقاولين,خدمات المحاسبة,خدمات التمويل,تأسيس الشركات"/>
       </Helmet>
 
-      <NavbarAr page="services" />
-      <MiniHeroAr title={"خدماتنا"} />
-      <ServicesAr />
-      <WhyUsAr />
-      <ContactInfoAr />
-      <FooterAr />
+      {/* Suspense to handle loading state while lazy components are loading */}
+      <Suspense fallback={<Loading/>}>
+        <NavbarAr page="services" />
+        <MiniHeroAr title={"خدماتنا"} />
+        <ServicesAr />
+        <WhyUsAr />
+        <ContactInfoAr />
+        <FooterAr />
+      </Suspense>
     </>
   );
 }

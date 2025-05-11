@@ -1,15 +1,18 @@
-import React, { useEffect } from "react";
-import Navbar from "../components/Navbar";
-import MiniHero from "../components/MiniHero";
-import ContactInfo from "../components/ContactInfo";
-import Footer from "../components/Footer";
-import { Helmet } from "react-helmet"; // Import React Helmet
-import "../components/style/service-details.scss";
+import React, { useEffect, lazy, Suspense } from "react";
+import { Helmet } from "react-helmet";
+
+// Lazy load components
+const Navbar = lazy(() => import("../components/Navbar"));
+const MiniHero = lazy(() => import("../components/MiniHero"));
+const ContactInfo = lazy(() => import("../components/ContactInfo"));
+const Footer = lazy(() => import("../components/Footer"));
+const Loading = lazy(()=> import("../components/Loading"));
 function CompanyFormation() {
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
       <Helmet>
@@ -33,62 +36,64 @@ function CompanyFormation() {
         />
       </Helmet>
 
-      <Navbar page="company" />
-      <MiniHero title="Company Formation Services" />
+      <Suspense fallback={<Loading/>}>
+        <Navbar page="company" />
+        <MiniHero title="Company Formation Services" />
 
-      <div className="container mx-auto px-lg-5 py-5 service-details">
-        <h2 className="text-3xl font-bold mb-4">Company Formation Services</h2>
-        <p className="mb-6">
-          Our company formation services provide complete support for
-          establishing new businesses, ensuring a hassle-free setup process.
-          From legal registration to administrative procedures, we handle every
-          step to help you launch your company quickly and efficiently.
-        </p>
-        <h3>Our Comprehensive Services</h3>
-        <ul className="space-y-4 list-disc pl-5">
-          <li>
-            <strong>Business Structure Consultation:</strong> Advising on the
-            best legal structure (LLC, joint-stock, etc.) to fit your business
-            goals.
-          </li>
-          <li>
-            <strong>Legal Registration Support:</strong> Assisting with business
-            registration, licensing, and compliance with local regulations.
-          </li>
-          <li>
-            <strong>Document Preparation:</strong> Preparing and submitting all
-            required documentation for company formation.
-          </li>
-          <li>
-            <strong>Bank Account Setup:</strong> Facilitating the opening of
-            corporate bank accounts.
-          </li>
-          <li>
-            <strong>Post-Formation Services:</strong> Offering continued support
-            with ongoing regulatory compliance and reporting.
-          </li>
-        </ul>
-
-        <div className="mt-8">
-          <h3 className="text-2xl font-bold">Why Choose Us?</h3>
-          <p className="mt-2">
-            With our expertise and personalized approach, we ensure a smooth
-            company formation process, saving you time and effort. Our goal is
-            to help you focus on building and growing your business from day
-            one.
+        <div className="container mx-auto px-lg-5 py-5 service-details">
+          <h2 className="text-3xl font-bold mb-4">Company Formation Services</h2>
+          <p className="mb-6">
+            Our company formation services provide complete support for
+            establishing new businesses, ensuring a hassle-free setup process.
+            From legal registration to administrative procedures, we handle every
+            step to help you launch your company quickly and efficiently.
           </p>
+          <h3>Our Comprehensive Services</h3>
+          <ul className="space-y-4 list-disc pl-5">
+            <li>
+              <strong>Business Structure Consultation:</strong> Advising on the
+              best legal structure (LLC, joint-stock, etc.) to fit your business
+              goals.
+            </li>
+            <li>
+              <strong>Legal Registration Support:</strong> Assisting with business
+              registration, licensing, and compliance with local regulations.
+            </li>
+            <li>
+              <strong>Document Preparation:</strong> Preparing and submitting all
+              required documentation for company formation.
+            </li>
+            <li>
+              <strong>Bank Account Setup:</strong> Facilitating the opening of
+              corporate bank accounts.
+            </li>
+            <li>
+              <strong>Post-Formation Services:</strong> Offering continued support
+              with ongoing regulatory compliance and reporting.
+            </li>
+          </ul>
+
+          <div className="mt-8">
+            <h3 className="text-2xl font-bold">Why Choose Us?</h3>
+            <p className="mt-2">
+              With our expertise and personalized approach, we ensure a smooth
+              company formation process, saving you time and effort. Our goal is
+              to help you focus on building and growing your business from day
+              one.
+            </p>
+          </div>
+
+          <div className="mt-6">
+            <p className="font-semibold">
+              Contact us today to learn more about our company formation services
+              and how we can help bring your business vision to life.
+            </p>
+          </div>
         </div>
 
-        <div className="mt-6">
-          <p className="font-semibold">
-            Contact us today to learn more about our company formation services
-            and how we can help bring your business vision to life.
-          </p>
-        </div>
-      </div>
-
-      <ContactInfo />
-      <Footer />
+        <ContactInfo />
+        <Footer />
+      </Suspense>
     </>
   );
 }

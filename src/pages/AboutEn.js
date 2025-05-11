@@ -1,17 +1,20 @@
-import React, { useEffect } from "react";
-import Navbar from "../components/Navbar";
-import MiniHero from "../components/MiniHero";
-import AboutUsOverall from "../components/AboutUsOverall";
-import WhyUs from "../components/WhyUs";
-import ContactInfo from "../components/ContactInfo";
-import Footer from "../components/Footer";
-import { Helmet } from "react-helmet"; // Import React Helmet
+import React, { useEffect, Suspense, lazy } from "react";
+import { Helmet } from "react-helmet";
+
+// Lazy load components
+const Navbar = lazy(() => import("../components/Navbar"));
+const MiniHero = lazy(() => import("../components/MiniHero"));
+const AboutUsOverall = lazy(() => import("../components/AboutUsOverall"));
+const WhyUs = lazy(() => import("../components/WhyUs"));
+const ContactInfo = lazy(() => import("../components/ContactInfo"));
+const Footer = lazy(() => import("../components/Footer"));
+const Loading = lazy(()=> import("../components/Loading"));
 
 function AboutEn() {
   useEffect(() => {
-    // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
       <Helmet>
@@ -29,12 +32,15 @@ function AboutEn() {
         <meta property="og:url" content="https://lam.com.sa/about-us" />
         <meta name="keywords" content="About Lam Al Arabia Professional Consulting,Experts in financial, administrative consultancy,Who we are – Lam Al Arabia,Trusted professional consulting firm in Saudi Arabia"/>
       </Helmet>
-      <Navbar page="about" />
-      <MiniHero title="About Us" />
-      <AboutUsOverall />
-      <WhyUs />
-      <ContactInfo />
-      <Footer />
+
+      <Suspense fallback={<Loading/>}>
+        <Navbar page="about" />
+        <MiniHero title="About Us" />
+        <AboutUsOverall />
+        <WhyUs />
+        <ContactInfo />
+        <Footer />
+      </Suspense>
     </>
   );
 }

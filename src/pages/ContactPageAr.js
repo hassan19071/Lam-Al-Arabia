@@ -1,11 +1,13 @@
-import React, { useEffect } from "react";
-import NavbarAr from "../components/NavbarAr";
-import ContactInfoAr from "../components/ContactInfoAr";
-import FooterAr from "../components/FooterAr";
-import MiniHeroAr from "../components/MiniHeroAr";
-import ContactAr from "../components/ContactAr";
+import React, { useEffect, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet";
 
+// Lazy load components
+const NavbarAr = lazy(() => import("../components/NavbarAr"));
+const MiniHeroAr = lazy(() => import("../components/MiniHeroAr"));
+const ContactAr = lazy(() => import("../components/ContactAr"));
+const ContactInfoAr = lazy(() => import("../components/ContactInfoAr"));
+const FooterAr = lazy(() => import("../components/FooterAr"));
+const Loading = lazy(()=> import("../components/Loading"));
 function ContactPageAr() {
   useEffect(() => {
     // Set the page direction to RTL when this component is rendered
@@ -37,11 +39,14 @@ function ContactPageAr() {
         <meta property="og:url" content="https://lam.com.sa/تواصل-معنا" />
         <meta name="keywords" content="اتصل بشركة لام للاستشارات,احصل على خطة استشارية مخصصة,طلب استشارة مالية أو إدارية"/>
       </Helmet>
-      <NavbarAr page="contact" />
-      <MiniHeroAr title={"تواصل معنا"} />
-      <ContactAr />
-      <ContactInfoAr />
-      <FooterAr />
+
+      <Suspense fallback={<Loading/>}>
+        <NavbarAr page="contact" />
+        <MiniHeroAr title={"تواصل معنا"} />
+        <ContactAr />
+        <ContactInfoAr />
+        <FooterAr />
+      </Suspense>
     </>
   );
 }

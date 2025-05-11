@@ -1,14 +1,16 @@
-import React, { useEffect } from "react";
-import NavbarAr from "../components/NavbarAr";
-import HeroSectionAr from "../components/HeroSectionAr";
-import AboutUsAr from "../components/AboutAr";
-import FeaturesSectionAr from "../components/FeaturesSectionAr";
-import ServicesAr from "../components/ServicesAr";
-import ContactAr from "../components/ContactAr";
-import ContactInfoAr from "../components/ContactInfoAr";
-import FooterAr from "../components/FooterAr";
+import React, { useEffect, Suspense } from "react";
 import { Helmet } from "react-helmet";
 
+// Lazy load components
+const NavbarAr = React.lazy(() => import("../components/NavbarAr"));
+const HeroSectionAr = React.lazy(() => import("../components/HeroSectionAr"));
+const AboutUsAr = React.lazy(() => import("../components/AboutAr"));
+const FeaturesSectionAr = React.lazy(() => import("../components/FeaturesSectionAr"));
+const ServicesAr = React.lazy(() => import("../components/ServicesAr"));
+const ContactAr = React.lazy(() => import("../components/ContactAr"));
+const ContactInfoAr = React.lazy(() => import("../components/ContactInfoAr"));
+const FooterAr = React.lazy(() => import("../components/FooterAr"));
+const Loading = React.lazy(()=> import("../components/Loading"));
 function HomeAr() {
   useEffect(() => {
     // Set the page direction to RTL when this component is rendered
@@ -39,14 +41,17 @@ function HomeAr() {
         <meta name="keywords" content="شركة لام للاستشارات المهنية,استشارات إدارية ومالية,أفضل شركة استشارات مهنية في المملكة,شركة استشارات متعددة التخصصات"/>
       </Helmet>
 
-      <NavbarAr page="home" />
-      <HeroSectionAr />
-      <AboutUsAr />
-      <FeaturesSectionAr />
-      <ServicesAr />
-      <ContactAr />
-      <ContactInfoAr />
-      <FooterAr />
+      {/* Suspense to handle loading state while lazy components are loading */}
+      <Suspense fallback={<Loading/>}>
+        <NavbarAr page="home" />
+        <HeroSectionAr />
+        <AboutUsAr />
+        <FeaturesSectionAr />
+        <ServicesAr />
+        <ContactAr />
+        <ContactInfoAr />
+        <FooterAr />
+      </Suspense>
     </>
   );
 }

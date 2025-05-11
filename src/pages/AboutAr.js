@@ -1,22 +1,21 @@
-import React, { useEffect } from "react";
-import NavbarAr from "../components/NavbarAr";
-import ContactInfoAr from "../components/ContactInfoAr";
-import FooterAr from "../components/FooterAr";
-import MiniHeroAr from "../components/MiniHeroAr";
-import AboutUsOverallAr from "../components/AboutUsOverallAr";
-import WhyUsAr from "../components/WhyUsAr";
+import React, { useEffect, Suspense, lazy } from "react";
 import { Helmet } from "react-helmet";
+
+// Lazy imports
+const NavbarAr = lazy(() => import("../components/NavbarAr"));
+const ContactInfoAr = lazy(() => import("../components/ContactInfoAr"));
+const FooterAr = lazy(() => import("../components/FooterAr"));
+const MiniHeroAr = lazy(() => import("../components/MiniHeroAr"));
+const AboutUsOverallAr = lazy(() => import("../components/AboutUsOverallAr"));
+const WhyUsAr = lazy(() => import("../components/WhyUsAr"));
+const Loading = lazy(()=> import("../components/Loading"));
 function AboutAr() {
   useEffect(() => {
-    // Set the page direction to RTL when this component is rendered
     document.body.dir = "rtl";
     document.documentElement.lang = "ar";
-
-    // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
-    // Cleanup when the component is unmounted (if you use this approach for switching pages)
     return () => {
-      document.body.dir = "ltr"; // Revert back to LTR if needed
+      document.body.dir = "ltr";
       document.documentElement.lang = "en";
     };
   }, []);
@@ -39,12 +38,14 @@ function AboutAr() {
         <meta name="keywords" content="عن شركة لام العربية للاستشارات,خبراء الاستشارات المالية والإدارية,استشارات مهنية موثوقة في السعودية,من نحن – شركة لام للاستشارات المتكاملة"/>
       </Helmet>
 
-      <NavbarAr page="about" />
-      <MiniHeroAr title={"من نحن"} />
-      <AboutUsOverallAr />
-      <WhyUsAr />
-      <ContactInfoAr />
-      <FooterAr />
+      <Suspense fallback={<Loading/>}>
+        <NavbarAr page="about" />
+        <MiniHeroAr title="من نحن" />
+        <AboutUsOverallAr />
+        <WhyUsAr />
+        <ContactInfoAr />
+        <FooterAr />
+      </Suspense>
     </>
   );
 }
