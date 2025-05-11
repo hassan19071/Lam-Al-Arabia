@@ -15,7 +15,7 @@ function Footer() {
               <Link to="#">
                 <i className="fa-brands fa-linkedin-in"></i>
               </Link>
-              <Link to="#">
+              <Link to="https://wa.me/966593072004" target="_blank">
                 <i className="fa-brands fa-whatsapp"></i>
               </Link>
             </div>
