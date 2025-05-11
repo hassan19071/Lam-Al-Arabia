@@ -25,7 +25,7 @@ function ContactEn() {
           property="og:description"
           content="Reach out to Lam Al Arabia for expert consulting services. Our team is ready to assist you with your business needs."
         />
-        <meta property="og:url" content="https://yourwebsite.com/contact-us" />
+        <meta property="og:url" content="https://lam.com.sa/contact-us" />
         <meta name="keywords" content="Contact Lam Al Arabia Professional Consulting,Talk to a business advisor,Book a financial or administrative consultation,Get a custom consulting plan"/>
       </Helmet>
       <Navbar page="contact" />

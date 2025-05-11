@@ -29,7 +29,7 @@ function ZakatTaxServices() {
         />
         <meta
           property="og:url"
-          content="https://yourwebsite.com/services/zakat-and-tax"
+          content="https://lam.com.sa/services/zakat-and-tax"
         />
       </Helmet>
 

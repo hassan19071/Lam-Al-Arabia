@@ -38,7 +38,7 @@ function FinancialConsultingAr() {
         />
         <meta
           property="og:url"
-          content="https://yourwebsite.com/services/financial-consulting"
+          content="https://lam.com.sa/services/financial-consulting"
         />
       </Helmet>
       <NavbarAr page="consulting" />

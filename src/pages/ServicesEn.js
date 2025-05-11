@@ -26,7 +26,7 @@ function ServicesEn() {
           property="og:description"
           content="Lam Al Arabia provides expert consulting services including accounting, financial consulting, and more to help businesses optimize and grow."
         />
-        <meta property="og:url" content="https://yourwebsite.com/services" />
+        <meta property="og:url" content="https://lam.com.sa/services" />
          <meta name="keywords" content="Accounting Services,Zakat and Tax Services,Financial Consultations,Contractor Classification Certificate Issuance,Company Formation,Financing Services,Feasibility Studies Services,Accounts & Systems Structuring"/>
       </Helmet>
       <Navbar page="services" />

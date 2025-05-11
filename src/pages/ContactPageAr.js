@@ -34,7 +34,7 @@ function ContactPageAr() {
           property="og:description"
           content="اتصل بلام العربية للحصول على خدمات استشارية من الخبراء. فريقنا جاهز لمساعدتك في تلبية احتياجات عملك."
         />
-        <meta property="og:url" content="https://yourwebsite.com/تواصل-معنا" />
+        <meta property="og:url" content="https://lam.com.sa/تواصل-معنا" />
         <meta name="keywords" content="اتصل بشركة لام للاستشارات,احصل على خطة استشارية مخصصة,طلب استشارة مالية أو إدارية"/>
       </Helmet>
       <NavbarAr page="contact" />

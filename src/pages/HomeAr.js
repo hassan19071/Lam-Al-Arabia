@@ -35,7 +35,7 @@ function HomeAr() {
           property="og:description"
           content="لام العربية تقدم خدمات استشارية للأعمال، مع التركيز على التخطيط الاستراتيجي، تحسين العمليات، والنمو المالي."
         />
-        <meta property="og:url" content="https://yourwebsite.com" />
+        <meta property="og:url" content="https://lam.com.sa" />
         <meta name="keywords" content="شركة لام للاستشارات المهنية,استشارات إدارية ومالية,أفضل شركة استشارات مهنية في المملكة,شركة استشارات متعددة التخصصات"/>
       </Helmet>
 

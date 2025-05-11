@@ -35,7 +35,7 @@ function ServicesPageAr() {
           property="og:description"
           content="لام العربية تقدم خدمات استشارية متخصصة بما في ذلك المحاسبة، الاستشارات المالية، والمزيد لمساعدة الشركات على التحسين والنمو."
         />
-        <meta property="og:url" content="https://yourwebsite.com/services" />
+        <meta property="og:url" content="https://lam.com.sa/services" />
         <meta name="keywords" content="الاستشارات المالية,خدمات الزكاة والضرائب,إصدار شهادة تصنيف المقاولين,خدمات المحاسبة,خدمات التمويل,تأسيس الشركات"/>
       </Helmet>
 

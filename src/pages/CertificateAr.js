@@ -38,7 +38,7 @@ function CertificateAr() {
         />
         <meta
           property="og:url"
-          content="https://yourwebsite.com/services/contractor-classification-certificate-issuance"
+          content="https://lam.com.sa/services/contractor-classification-certificate-issuance"
         />
       </Helmet>
 

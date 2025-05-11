@@ -35,7 +35,7 @@ function AboutAr() {
           property="og:description"
           content="تقدم لام العربية حلولاً مخصصة للأعمال عبر الصناعات المختلفة، لمساعدة الشركات على النمو وتحسين العمليات والتغلب على التحديات."
         />
-        <meta property="og:url" content="https://yourwebsite.com/من-نحن" />
+        <meta property="og:url" content="https://lam.com.sa/من-نحن" />
         <meta name="keywords" content="عن شركة لام العربية للاستشارات,خبراء الاستشارات المالية والإدارية,استشارات مهنية موثوقة في السعودية,من نحن – شركة لام للاستشارات المتكاملة"/>
       </Helmet>
 

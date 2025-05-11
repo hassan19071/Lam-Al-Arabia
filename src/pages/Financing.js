@@ -29,7 +29,7 @@ function Financing() {
         />
         <meta
           property="og:url"
-          content="https://yourwebsite.com/services/financing-services"
+          content="https://lam.com.sa/services/financing-services"
         />
       </Helmet>
 

@@ -38,7 +38,7 @@ function AccountsSystemsStructuringAr() {
         />
         <meta
           property="og:url"
-          content="https://yourwebsite.com/services/accounts-systems-structuring"
+          content="https://lam.com.sa/services/accounts-systems-structuring"
         />
       </Helmet>
 

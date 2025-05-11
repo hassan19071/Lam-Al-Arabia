@@ -38,7 +38,7 @@ function AccountingABookkeepingAr() {
         />
         <meta
           property="og:url"
-          content="https://yourwebsite.com/services/accounting-and-bookkeeping-services"
+          content="https://lam.com.sa/services/accounting-and-bookkeeping-services"
         />
       </Helmet>
       <NavbarAr page="accounting" />

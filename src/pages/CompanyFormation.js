@@ -29,7 +29,7 @@ function CompanyFormation() {
         />
         <meta
           property="og:url"
-          content="https://yourwebsite.com/services/company-formation-services"
+          content="https://lam.com.sa/services/company-formation-services"
         />
       </Helmet>
 

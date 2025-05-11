@@ -35,7 +35,7 @@ function FeasibilityStudyAr() {
         />
         <meta
           property="og:url"
-          content="https://yourwebsite.com/services/feasibility-study-services"
+          content="https://lam.com.sa/services/feasibility-study-services"
         />
       </Helmet>
 
