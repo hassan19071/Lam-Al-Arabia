@@ -62,7 +62,7 @@ function Contact() {
       //code conversion from google ads
       if (window.gtag) {
         window.gtag('event', 'conversion', {
-          send_to: 'AW-17057790080/xxxxxxxxxxxxx',
+          send_to: 'AW-17057790080/17057790080',
           value: 0.00,
           currency: 'SAR'
         });
