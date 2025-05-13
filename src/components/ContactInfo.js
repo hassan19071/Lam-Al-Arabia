@@ -21,6 +21,9 @@ function ContactInfo() {
             </div>
             <div className="text-info">
               <h4>Call Us</h4>
+              <span className="d-block">
+                <Link to="tel:+966547212133">+966 54 721 2133</Link>
+              </span>
               <span>
                 <Link to="tel:+966593072004">+966 59 307 2004</Link>
               </span>

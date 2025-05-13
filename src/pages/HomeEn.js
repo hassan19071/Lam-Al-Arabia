@@ -1,5 +1,6 @@
 import React, { useEffect, Suspense } from "react";
 import { Helmet } from "react-helmet";
+import TopHeader from "../components/TopHeader";
 
 // Lazy load components
 const Navbar = React.lazy(() => import("../components/Navbar"));
@@ -10,7 +11,7 @@ const Services = React.lazy(() => import("../components/Services"));
 const Contact = React.lazy(() => import("../components/Contact"));
 const ContactInfo = React.lazy(() => import("../components/ContactInfo"));
 const Footer = React.lazy(() => import("../components/Footer"));
-const Loading = React.lazy(()=> import("../components/Loading"));
+const Loading = React.lazy(() => import("../components/Loading"));
 function HomeEn() {
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
@@ -32,11 +33,15 @@ function HomeEn() {
           content="Lam Al Arabia Professional Consulting provides business consulting services, focusing on strategic planning, operational optimization, and financial growth."
         />
         <meta property="og:url" content="https://lam.com.sa" />
-        <meta name="keywords" content="Lam Al Arabia Professional Consulting,Financial, Administrative Consulting Saudi Arabia,Multidisciplinary consulting firm Dammam & Khoba,Best professional consulting company in Saudi Arabia"/>
+        <meta
+          name="keywords"
+          content="Lam Al Arabia Professional Consulting,Financial, Administrative Consulting Saudi Arabia,Multidisciplinary consulting firm Dammam & Khoba,Best professional consulting company in Saudi Arabia"
+        />
       </Helmet>
 
       {/* Suspense to handle loading state while lazy components are loading */}
-      <Suspense fallback={<Loading/>}>
+      <Suspense fallback={<Loading />}>
+        <TopHeader />
         <Navbar page="home" />
         <HeroSection />
         <About />

@@ -3,9 +3,7 @@
 .navbar {
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  .navbar-expand-lg .navbar-collapse {
-    flex-basis: 100% !important;
-  }
+
   /* Style the dropdown container */
   .nav-item.dropdown {
     position: relative;
@@ -40,7 +38,9 @@
       text-decoration: none;
       display: block;
       /* Hover effect for dropdown items */
-      &:hover , &.active, &:focus {
+      &:hover,
+      &.active,
+      &:focus {
         background-color: #f8f8f8 !important;
         color: $mainColor;
       }
@@ -49,12 +49,12 @@
 
   .navbar-brand {
     img {
-      width: 70%; /* Makes the logo width responsive */
+      width: 65%; /* Makes the logo width responsive */
       max-width: 200px; /* Maximum width to ensure the logo doesn’t get too big */
       min-width: 100px; /* Minimum width to ensure the logo doesn’t get too small */
       height: auto;
-      @media (max-width:991px) {
-        width: 60%;
+      @media (max-width: 991px) {
+        width: 55%;
       }
     }
   }
@@ -70,6 +70,15 @@
         color: $mainColor;
       }
     }
+    &.contact a {
+      background-color: $mainColor;
+      color: #fff;
+      padding: 8px 20px;
+      transition: 0.3s;
+      &:hover {
+        background-color: $secondColor;
+      }
+    }
   }
   .navbar-toggler {
     &:focus {
@@ -78,15 +87,6 @@
   }
   .contact-infos {
     a {
-      &.contact {
-        background-color: $mainColor;
-        color: #fff;
-        padding: 8px 20px;
-        transition: 0.3s;
-        &:hover {
-          background-color: $secondColor;
-        }
-      }
       &.phone {
         color: $secondColor;
         font-size: 16px;

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import ArabicIcon from "../assets/arabic.png";
 import Logo from "../assets/lam logo.png";
 import "./style/navbar.scss";
-
 function Navbar({ page }) {
   return (
     <nav className="navbar navbar-expand-lg bg-white py-2">
@@ -26,7 +25,7 @@ function Navbar({ page }) {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0 justify-content-start">
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link
                 className={page === "home" ? "nav-link active" : "nav-link"}
@@ -152,29 +151,18 @@ function Navbar({ page }) {
                 </li>
               </ul>
             </li>
-            <li className="nav-item mt-lg-0 mt-1">
-              <Link
-                className={page === "contact" ? "nav-link active" : "nav-link"}
-                to="/contact-us"
-              >
-                Contact Us
-              </Link>
-            </li>
             <li className="nav-item position-relative">
               <Link className="nav-link d-flex align-items-center" to="/ar">
                 <img src={ArabicIcon} alt="arabic language" />{" "}
                 <span className="ms-1">العربية</span>
               </Link>
             </li>
+            <li className="ms-lg-4 contact nav-item">
+              <Link className="nav-link text-center" to="/contact-us">
+                Contact Us
+              </Link>
+            </li>
           </ul>
-          <div className="contact-infos d-flex align-items-center mt-lg-0 mt-3">
-            <Link className="nav-link me-4 contact" to="/contact-us">
-              Contact Us
-            </Link>
-            <Link className="nav-link phone" to="tel:+966593072004">
-              <i className="fa-solid fa-phone"></i> +966 59 307 2004
-            </Link>
-          </div>
         </div>
       </div>
     </nav>

@@ -8,10 +8,10 @@ function NavbarAr({ page }) {
   return (
     <nav className="navbar navbar-expand-lg bg-white py-2">
       <div className="container">
-        <Link className="navbar-brand ms-lg-2" to="/ar">
+        <Link className="navbar-brand me-0" to="/ar">
           <img
             src={Logo}
-            alt="Lam Alarabia for professional consulting company Logo"
+            alt="Lam Al Arabia professional consulting company Logo"
           />
         </Link>
         <button
@@ -29,7 +29,7 @@ function NavbarAr({ page }) {
           className="collapse navbar-collapse justify-content-between"
           id="navbarSupportedContent"
         >
-          <ul className="navbar-nav  mb-2 mb-lg-0 justify-content-end">
+          <ul className="navbar-nav  mb-2 mb-lg-0 me-auto">
             <li className="nav-item">
               <Link
                 className={page === "home" ? "nav-link active" : "nav-link"}
@@ -157,29 +157,18 @@ function NavbarAr({ page }) {
                 </li>
               </ul>
             </li>
-            <li className="nav-item mt-lg-0 mt-1">
-              <Link
-                className={page === "contact" ? "nav-link active" : "nav-link"}
-                to="/ar/تواصل-معنا"
-              >
-                تواصل معنا
-              </Link>
-            </li>
             <li className="nav-item position-relative">
               <Link className="nav-link d-flex align-items-center" to="/en">
                 <span className="ms-1">English</span>
                 <img src={EnglishIcon} alt="arabic language" />{" "}
               </Link>
             </li>
+            <li className="me-lg-4 contact nav-item ms-0">
+              <Link className="nav-link text-center" to="/ar/تواصل-معنا">
+                تواصل معنا
+              </Link>
+            </li>
           </ul>
-          <div className="contact-infos d-flex align-items-center mt-lg-0 mt-3">
-            <Link className="nav-link ms-4 contact" to="/ar/تواصل-معنا">
-              تواصل معنا
-            </Link>
-            <Link className="nav-link phone text-left" to="tel:+966593072004">
-              0593072004 <i className="fa-solid fa-phone"></i>
-            </Link>
-          </div>
         </div>
       </div>
     </nav>

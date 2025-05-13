@@ -1,0 +1,19 @@
+@use "./vars.scss" as *;
+.top-header{      
+    background-color: $secondColor;
+    padding: 7px 0;
+    .email-phone{
+        i{
+            color: $mainColor;
+        }
+    }
+    span,a,i{
+        color: #eee;
+        text-decoration: none;
+        font-size: 14px;
+        transition: .3s;
+    }
+    a:hover, a i:hover{
+        color: $mainColor;
+    }
+}
