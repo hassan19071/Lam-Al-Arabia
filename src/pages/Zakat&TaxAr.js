@@ -1,13 +1,16 @@
 import React, { useEffect, Suspense } from "react";
 import { Helmet } from "react-helmet";
+import TopHeaderAr from "../components/TopHeaderAr";
 
 // Lazy load components
 const NavbarAr = React.lazy(() => import("../components/NavbarAr"));
 const MiniHeroAr = React.lazy(() => import("../components/MiniHeroAr"));
-const ServiceDetailsAr = React.lazy(() => import("../components/ServicesDetailsAr"));
+const ServiceDetailsAr = React.lazy(() =>
+  import("../components/ServicesDetailsAr")
+);
 const ContactInfoAr = React.lazy(() => import("../components/ContactInfoAr"));
 const FooterAr = React.lazy(() => import("../components/FooterAr"));
-const Loading = React.lazy(()=> import("../components/Loading"));
+const Loading = React.lazy(() => import("../components/Loading"));
 function ZakkatATaxAr() {
   useEffect(() => {
     // Set the page direction to RTL when this component is rendered
@@ -31,7 +34,10 @@ function ZakkatATaxAr() {
           content="تقدم لام العربية خدمات الزكاة والضرائب المتخصصة لمساعدة الشركات في الامتثال للوائح المملكة العربية السعودية. احصل على المساعدة في تقديم الإقرارات الزكوية، تسجيل ضريبة القيمة المضافة، الاستشارات الضريبية، والمزيد."
         />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="خدمات الزكاة والضرائب - لام العربية" />
+        <meta
+          property="og:title"
+          content="خدمات الزكاة والضرائب - لام العربية"
+        />
         <meta
           property="og:description"
           content="اكتشف كيف تضمن خدمات الزكاة والضرائب من لمى العربية التزام عملك باللوائح الضريبية السعودية، بينما تحسن الأداء المالي."
@@ -43,7 +49,8 @@ function ZakkatATaxAr() {
       </Helmet>
 
       {/* Suspense to handle loading state while lazy components are loading */}
-      <Suspense fallback={<Loading/>}>
+      <Suspense fallback={<Loading />}>
+        <TopHeaderAr />
         <NavbarAr page="zakat and tax" />
         <MiniHeroAr title="خدمات الزكاة والضرائب" />
         <ServiceDetailsAr

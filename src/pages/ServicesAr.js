@@ -1,5 +1,6 @@
 import React, { useEffect, Suspense } from "react";
 import { Helmet } from "react-helmet";
+import TopHeaderAr from "../components/TopHeaderAr";
 
 // Lazy load components
 const NavbarAr = React.lazy(() => import("../components/NavbarAr"));
@@ -8,7 +9,7 @@ const ServicesAr = React.lazy(() => import("../components/ServicesAr"));
 const WhyUsAr = React.lazy(() => import("../components/WhyUsAr"));
 const ContactInfoAr = React.lazy(() => import("../components/ContactInfoAr"));
 const FooterAr = React.lazy(() => import("../components/FooterAr"));
-const Loading = React.lazy(()=> import("../components/Loading"));
+const Loading = React.lazy(() => import("../components/Loading"));
 function ServicesPageAr() {
   useEffect(() => {
     // Set the page direction to RTL when this component is rendered
@@ -38,11 +39,15 @@ function ServicesPageAr() {
           content="لام العربية تقدم خدمات استشارية متخصصة بما في ذلك المحاسبة، الاستشارات المالية، والمزيد لمساعدة الشركات على التحسين والنمو."
         />
         <meta property="og:url" content="https://lam.com.sa/services" />
-        <meta name="keywords" content="الاستشارات المالية,خدمات الزكاة والضرائب,إصدار شهادة تصنيف المقاولين,خدمات المحاسبة,خدمات التمويل,تأسيس الشركات"/>
+        <meta
+          name="keywords"
+          content="الاستشارات المالية,خدمات الزكاة والضرائب,إصدار شهادة تصنيف المقاولين,خدمات المحاسبة,خدمات التمويل,تأسيس الشركات"
+        />
       </Helmet>
 
       {/* Suspense to handle loading state while lazy components are loading */}
-      <Suspense fallback={<Loading/>}>
+      <Suspense fallback={<Loading />}>
+        <TopHeaderAr />
         <NavbarAr page="services" />
         <MiniHeroAr title={"خدماتنا"} />
         <ServicesAr />

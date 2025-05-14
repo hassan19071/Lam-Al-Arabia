@@ -1,11 +1,12 @@
 import React, { useEffect, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet";
+import TopHeader from "../components/TopHeader";
 
 const Navbar = lazy(() => import("../components/Navbar"));
 const MiniHero = lazy(() => import("../components/MiniHero"));
 const ContactInfo = lazy(() => import("../components/ContactInfo"));
 const Footer = lazy(() => import("../components/Footer"));
-const Loading = lazy(()=> import("../components/Loading"));
+const Loading = lazy(() => import("../components/Loading"));
 function FeasibilityStudy() {
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
@@ -35,17 +36,19 @@ function FeasibilityStudy() {
         />
       </Helmet>
 
-      <Suspense fallback={<Loading/>}>
+      <Suspense fallback={<Loading />}>
+        <TopHeader />
         <Navbar page="feasibility" />
         <MiniHero title="Feasibility Study Services" />
-
         <div className="container mx-auto px-lg-5 py-5 service-details">
-          <h2 className="text-3xl font-bold mb-4">Feasibility Study Services</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Feasibility Study Services
+          </h2>
           <p className="mb-6">
-            Our feasibility study services help businesses assess the practicality
-            and profitability of construction and development projects. We provide
-            in-depth analysis and actionable insights, enabling you to make
-            well-informed investment decisions.
+            Our feasibility study services help businesses assess the
+            practicality and profitability of construction and development
+            projects. We provide in-depth analysis and actionable insights,
+            enabling you to make well-informed investment decisions.
           </p>
           <h3>Our Comprehensive Services</h3>
           <ul className="space-y-4 list-disc pl-5">
@@ -55,7 +58,8 @@ function FeasibilityStudy() {
             </li>
             <li>
               <strong>Technical Feasibility:</strong> Assessing the technical
-              requirements, resources, and infrastructure needed for the project.
+              requirements, resources, and infrastructure needed for the
+              project.
             </li>
             <li>
               <strong>Financial Analysis:</strong> Providing detailed financial
@@ -67,8 +71,8 @@ function FeasibilityStudy() {
               proposing mitigation strategies to ensure project success.
             </li>
             <li>
-              <strong>Regulatory Compliance Review:</strong> Ensuring your project
-              meets all legal and regulatory requirements.
+              <strong>Regulatory Compliance Review:</strong> Ensuring your
+              project meets all legal and regulatory requirements.
             </li>
           </ul>
 

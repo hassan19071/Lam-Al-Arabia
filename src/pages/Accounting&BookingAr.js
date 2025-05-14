@@ -1,5 +1,6 @@
 import React, { useEffect, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet";
+import TopHeaderAr from "../components/TopHeaderAr";
 
 // Lazy load components
 const NavbarAr = lazy(() => import("../components/NavbarAr"));
@@ -7,7 +8,7 @@ const MiniHeroAR = lazy(() => import("../components/MiniHeroAr"));
 const ContactInfoAr = lazy(() => import("../components/ContactInfoAr"));
 const FooterAr = lazy(() => import("../components/FooterAr"));
 const ServiceDetailsAr = lazy(() => import("../components/ServicesDetailsAr"));
-const Loading = lazy(()=> import("../components/Loading"));
+const Loading = lazy(() => import("../components/Loading"));
 function AccountingABookkeepingAr() {
   useEffect(() => {
     document.body.dir = "rtl";
@@ -28,7 +29,10 @@ function AccountingABookkeepingAr() {
           content="اكتشف خدمات المحاسبة ومسك الدفاتر المهنية من لام العربية، المصممة لمساعدة عملك في إدارة البيانات المالية والتقارير والرواتب والمزيد."
         />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="خدمات المحاسبة ومسك الدفاتر - لام العربية" />
+        <meta
+          property="og:title"
+          content="خدمات المحاسبة ومسك الدفاتر - لام العربية"
+        />
         <meta
           property="og:description"
           content="خدمات المحاسبة ومسك الدفاتر الاحترافية لإدارة البيانات المالية، بما في ذلك إعداد التقارير، والمطابقة البنكية، والرواتب والمزيد."
@@ -39,7 +43,8 @@ function AccountingABookkeepingAr() {
         />
       </Helmet>
 
-      <Suspense fallback={<Loading/>}>
+      <Suspense fallback={<Loading />}>
+        <TopHeaderAr />
         <NavbarAr page="accounting" />
         <MiniHeroAR title={"خدمات المحاسبة ومسك الدفاتر"} />
         <ServiceDetailsAr

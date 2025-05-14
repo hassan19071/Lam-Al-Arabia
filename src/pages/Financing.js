@@ -1,12 +1,13 @@
 import React, { useEffect, Suspense } from "react";
 import { Helmet } from "react-helmet";
+import TopHeader from "../components/TopHeader";
 
 // Lazy load components
 const Navbar = React.lazy(() => import("../components/Navbar"));
 const MiniHero = React.lazy(() => import("../components/MiniHero"));
 const ContactInfo = React.lazy(() => import("../components/ContactInfo"));
 const Footer = React.lazy(() => import("../components/Footer"));
-const Loading = React.lazy(()=> import("../components/Loading"));
+const Loading = React.lazy(() => import("../components/Loading"));
 function Financing() {
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
@@ -37,7 +38,8 @@ function Financing() {
       </Helmet>
 
       {/* Suspense to handle loading state while lazy components are loading */}
-      <Suspense fallback={<Loading/>}>
+      <Suspense fallback={<Loading />}>
+        <TopHeader />
         <Navbar page="financing" />
         <MiniHero title="Financing Services" />
 
@@ -66,8 +68,8 @@ function Financing() {
               financial risks.
             </li>
             <li>
-              <strong>Consultation on Financing Solutions:</strong> Advising on a
-              range of financing options, including bank loans, leasing, and
+              <strong>Consultation on Financing Solutions:</strong> Advising on
+              a range of financing options, including bank loans, leasing, and
               alternative funding sources.
             </li>
             <li>

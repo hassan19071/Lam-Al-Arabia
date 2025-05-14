@@ -1,5 +1,6 @@
 import React, { useEffect, Suspense } from "react";
 import { Helmet } from "react-helmet";
+import TopHeader from "../components/TopHeader";
 
 // Lazy load the components
 const Navbar = React.lazy(() => import("../components/Navbar"));
@@ -35,7 +36,8 @@ function ZakatTaxServices() {
         />
       </Helmet>
 
-      <Suspense fallback={<Loading/>}>
+      <Suspense fallback={<Loading />}>
+        <TopHeader />
         <Navbar page="zakat-and-tax" />
         <MiniHero title="Zakat & Tax Services" />
 

@@ -1,12 +1,13 @@
 import React, { useEffect, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet";
+import TopHeader from "../components/TopHeader";
 
 // Lazy load components
 const Navbar = lazy(() => import("../components/Navbar"));
 const MiniHero = lazy(() => import("../components/MiniHero"));
 const ContactInfo = lazy(() => import("../components/ContactInfo"));
 const Footer = lazy(() => import("../components/Footer"));
-const Loading = lazy(()=> import("../components/Loading"));
+const Loading = lazy(() => import("../components/Loading"));
 function CompanyFormation() {
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
@@ -36,17 +37,19 @@ function CompanyFormation() {
         />
       </Helmet>
 
-      <Suspense fallback={<Loading/>}>
+      <Suspense fallback={<Loading />}>
+        <TopHeader />
         <Navbar page="company" />
         <MiniHero title="Company Formation Services" />
-
         <div className="container mx-auto px-lg-5 py-5 service-details">
-          <h2 className="text-3xl font-bold mb-4">Company Formation Services</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Company Formation Services
+          </h2>
           <p className="mb-6">
             Our company formation services provide complete support for
             establishing new businesses, ensuring a hassle-free setup process.
-            From legal registration to administrative procedures, we handle every
-            step to help you launch your company quickly and efficiently.
+            From legal registration to administrative procedures, we handle
+            every step to help you launch your company quickly and efficiently.
           </p>
           <h3>Our Comprehensive Services</h3>
           <ul className="space-y-4 list-disc pl-5">
@@ -56,20 +59,21 @@ function CompanyFormation() {
               goals.
             </li>
             <li>
-              <strong>Legal Registration Support:</strong> Assisting with business
-              registration, licensing, and compliance with local regulations.
+              <strong>Legal Registration Support:</strong> Assisting with
+              business registration, licensing, and compliance with local
+              regulations.
             </li>
             <li>
-              <strong>Document Preparation:</strong> Preparing and submitting all
-              required documentation for company formation.
+              <strong>Document Preparation:</strong> Preparing and submitting
+              all required documentation for company formation.
             </li>
             <li>
               <strong>Bank Account Setup:</strong> Facilitating the opening of
               corporate bank accounts.
             </li>
             <li>
-              <strong>Post-Formation Services:</strong> Offering continued support
-              with ongoing regulatory compliance and reporting.
+              <strong>Post-Formation Services:</strong> Offering continued
+              support with ongoing regulatory compliance and reporting.
             </li>
           </ul>
 
@@ -85,8 +89,8 @@ function CompanyFormation() {
 
           <div className="mt-6">
             <p className="font-semibold">
-              Contact us today to learn more about our company formation services
-              and how we can help bring your business vision to life.
+              Contact us today to learn more about our company formation
+              services and how we can help bring your business vision to life.
             </p>
           </div>
         </div>

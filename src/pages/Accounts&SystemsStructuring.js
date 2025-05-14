@@ -1,13 +1,14 @@
 import React, { useEffect, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet";
 import "../components/style/service-details.scss";
+import TopHeader from "../components/TopHeader";
 
 // Lazy load components
 const Navbar = lazy(() => import("../components/Navbar"));
 const MiniHero = lazy(() => import("../components/MiniHero"));
 const ContactInfo = lazy(() => import("../components/ContactInfo"));
 const Footer = lazy(() => import("../components/Footer"));
-const Loading = lazy(()=> import("../components/Loading"));
+const Loading = lazy(() => import("../components/Loading"));
 function AccountsSystemsStructuring() {
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
@@ -37,12 +38,15 @@ function AccountsSystemsStructuring() {
         />
       </Helmet>
 
-      <Suspense fallback={<Loading/>}>
+      <Suspense fallback={<Loading />}>
+        <TopHeader />
         <Navbar page="accounts-systems-structuring" />
         <MiniHero title="Accounts & Systems Structuring" />
 
         <div className="container mx-auto px-lg-5 py-5 service-details">
-          <h2 className="text-3xl font-bold mb-4">Accounts & Systems Structuring</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Accounts & Systems Structuring
+          </h2>
           <p className="mb-6">
             Our Accounts & Systems Structuring service is designed to help
             businesses establish and optimize their financial and administrative
@@ -57,14 +61,14 @@ function AccountsSystemsStructuring() {
               structured procedures.
             </li>
             <li>
-              <strong>Accounting System Setup:</strong> Designing and structuring
-              the chart of accounts, cost accounting systems, and financial
-              reporting frameworks.
+              <strong>Accounting System Setup:</strong> Designing and
+              structuring the chart of accounts, cost accounting systems, and
+              financial reporting frameworks.
             </li>
             <li>
-              <strong>Regulatory Compliance and Standardization:</strong> Ensuring
-              financial practices align with international accounting standards
-              and regulations.
+              <strong>Regulatory Compliance and Standardization:</strong>{" "}
+              Ensuring financial practices align with international accounting
+              standards and regulations.
             </li>
             <li>
               <strong>Document Workflow and Control:</strong> Creating and

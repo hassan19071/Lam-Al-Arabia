@@ -1,5 +1,6 @@
 import React, { useEffect, Suspense, lazy } from "react";
 import { Helmet } from "react-helmet";
+import TopHeader from "../components/TopHeader";
 
 // Lazy load components
 const Navbar = lazy(() => import("../components/Navbar"));
@@ -8,7 +9,7 @@ const AboutUsOverall = lazy(() => import("../components/AboutUsOverall"));
 const WhyUs = lazy(() => import("../components/WhyUs"));
 const ContactInfo = lazy(() => import("../components/ContactInfo"));
 const Footer = lazy(() => import("../components/Footer"));
-const Loading = lazy(()=> import("../components/Loading"));
+const Loading = lazy(() => import("../components/Loading"));
 
 function AboutEn() {
   useEffect(() => {
@@ -30,10 +31,14 @@ function AboutEn() {
           content="Lam Al Arabia provides tailored business solutions across industries, helping businesses grow, optimize operations, and navigate challenges."
         />
         <meta property="og:url" content="https://lam.com.sa/about-us" />
-        <meta name="keywords" content="About Lam Al Arabia Professional Consulting,Experts in financial, administrative consultancy,Who we are – Lam Al Arabia,Trusted professional consulting firm in Saudi Arabia"/>
+        <meta
+          name="keywords"
+          content="About Lam Al Arabia Professional Consulting,Experts in financial, administrative consultancy,Who we are – Lam Al Arabia,Trusted professional consulting firm in Saudi Arabia"
+        />
       </Helmet>
 
-      <Suspense fallback={<Loading/>}>
+      <Suspense fallback={<Loading />}>
+        <TopHeader />
         <Navbar page="about" />
         <MiniHero title="About Us" />
         <AboutUsOverall />

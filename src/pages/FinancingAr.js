@@ -1,13 +1,16 @@
 import React, { useEffect, Suspense } from "react";
 import { Helmet } from "react-helmet";
+import TopHeaderAr from "../components/TopHeaderAr";
 
 // Lazy load components
 const NavbarAr = React.lazy(() => import("../components/NavbarAr"));
 const MiniHeroAr = React.lazy(() => import("../components/MiniHeroAr"));
 const ContactInfoAr = React.lazy(() => import("../components/ContactInfoAr"));
 const FooterAr = React.lazy(() => import("../components/FooterAr"));
-const ServiceDetailsAr = React.lazy(() => import("../components/ServicesDetailsAr"));
-const Loading = React.lazy(()=> import("../components/Loading"));
+const ServiceDetailsAr = React.lazy(() =>
+  import("../components/ServicesDetailsAr")
+);
+const Loading = React.lazy(() => import("../components/Loading"));
 function FinancingAr() {
   useEffect(() => {
     // Set the page direction to RTL when this component is rendered
@@ -43,7 +46,8 @@ function FinancingAr() {
       </Helmet>
 
       {/* Suspense to handle loading state while lazy components are loading */}
-      <Suspense fallback={<Loading/>}>
+      <Suspense fallback={<Loading />}>
+        <TopHeaderAr />
         <NavbarAr page="financing" />
         <MiniHeroAr title="خدمات التمويل" />
         <ServiceDetailsAr

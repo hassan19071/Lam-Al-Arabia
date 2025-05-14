@@ -1,13 +1,16 @@
 import React, { useEffect, Suspense } from "react";
 import { Helmet } from "react-helmet";
+import TopHeaderAr from "../components/TopHeaderAr";
 
 // Lazy load components
 const NavbarAr = React.lazy(() => import("../components/NavbarAr"));
 const MiniHeroAr = React.lazy(() => import("../components/MiniHeroAr"));
-const ServiceDetailsAr = React.lazy(() => import("../components/ServicesDetailsAr"));
+const ServiceDetailsAr = React.lazy(() =>
+  import("../components/ServicesDetailsAr")
+);
 const ContactInfoAr = React.lazy(() => import("../components/ContactInfoAr"));
 const FooterAr = React.lazy(() => import("../components/FooterAr"));
-const Loading = React.lazy(()=> import("../components/Loading"));
+const Loading = React.lazy(() => import("../components/Loading"));
 function FinancialConsultingAr() {
   useEffect(() => {
     // Set the page direction to RTL when this component is rendered
@@ -46,10 +49,11 @@ function FinancialConsultingAr() {
       </Helmet>
 
       {/* Suspense to handle loading state while lazy components are loading */}
-      <Suspense fallback={<Loading/>}>
+      <Suspense fallback={<Loading />}>
+        <TopHeaderAr />
         <NavbarAr page="consulting" />
         <MiniHeroAr title="الاستشارات المالية" />
-        
+
         <ServiceDetailsAr
           serviceTitle="خدمات الاستشارات المالية"
           briefDescription="تهدف خدماتنا الاستشارية المالية إلى مساعدة الشركات في تحقيق الاستقرار المالي والنمو والتخطيط الاستراتيجي. نقدم إرشادات الخبراء وحلولًا مخصصة لتحسين الأداء المالي وتعزيز قدرات اتخاذ القرار."
@@ -66,7 +70,7 @@ function FinancialConsultingAr() {
           whyUsP="يضمن فريقنا المتخصص أن يتم التعامل مع بياناتك المالية بأعلى درجة من الدقة والسرية. نحن ملتزمون بمساعدتك في تحقيق الوضوح المالي وتحسين الكفاءة التشغيلية."
           contactMsg="اتصل بنا اليوم لمعرفة المزيد حول كيفية دعم خدماتنا المحاسبية، وخدمات المحاسبة، والزكاة، والضرائب، والاستشارات المالية لنمو أعمالك ونجاحك."
         />
-        
+
         <ContactInfoAr />
         <FooterAr />
       </Suspense>

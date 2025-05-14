@@ -1,5 +1,6 @@
 import React, { useEffect, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet";
+import TopHeaderAr from "../components/TopHeaderAr";
 
 // Lazy load components
 const NavbarAr = lazy(() => import("../components/NavbarAr"));
@@ -7,7 +8,7 @@ const MiniHeroAr = lazy(() => import("../components/MiniHeroAr"));
 const ServiceDetailsAr = lazy(() => import("../components/ServicesDetailsAr"));
 const ContactInfoAr = lazy(() => import("../components/ContactInfoAr"));
 const FooterAr = lazy(() => import("../components/FooterAr"));
-const Loading = lazy(()=> import("../components/Loading"));
+const Loading = lazy(() => import("../components/Loading"));
 function CertificateAr() {
   useEffect(() => {
     // Set the page direction to RTL when this component is rendered
@@ -45,7 +46,8 @@ function CertificateAr() {
         />
       </Helmet>
 
-      <Suspense fallback={<Loading/>}>
+      <Suspense fallback={<Loading />}>
+        <TopHeaderAr />
         <NavbarAr page="certificate" />
         <MiniHeroAr title="إصدار شهادة تصنيف المقاولين" />
         <ServiceDetailsAr

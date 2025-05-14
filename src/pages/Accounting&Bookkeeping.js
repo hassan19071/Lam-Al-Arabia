@@ -1,13 +1,14 @@
 import React, { useEffect, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet";
 import "../components/style/service-details.scss";
+import TopHeader from "../components/TopHeader";
 
 // Lazy load components
 const Navbar = lazy(() => import("../components/Navbar"));
 const MiniHero = lazy(() => import("../components/MiniHero"));
 const ContactInfo = lazy(() => import("../components/ContactInfo"));
 const Footer = lazy(() => import("../components/Footer"));
-const Loading = lazy(()=> import("../components/Loading"));
+const Loading = lazy(() => import("../components/Loading"));
 function AccountingABookkeeping() {
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
@@ -37,7 +38,8 @@ function AccountingABookkeeping() {
         />
       </Helmet>
 
-      <Suspense fallback={<Loading/>}>
+      <Suspense fallback={<Loading />}>
+        <TopHeader />
         <Navbar page="accounting" />
         <MiniHero title={"Accounting And Bookkeeping Services"} />
 
@@ -68,8 +70,8 @@ function AccountingABookkeeping() {
             </li>
             <li>
               <strong>Financial Reporting:</strong> We generate detailed
-              financial reports, including income statements, balance sheets, and
-              cash flow statements, to help you understand your business's
+              financial reports, including income statements, balance sheets,
+              and cash flow statements, to help you understand your business's
               financial standing and make informed decisions.
             </li>
             <li>
@@ -88,10 +90,10 @@ function AccountingABookkeeping() {
             <h3 className="text-2xl font-bold">Why Choose Us?</h3>
             <p className="mt-0">
               Our dedicated team of accounting professionals ensures that your
-              financial data is handled with utmost accuracy and confidentiality.
-              We are committed to helping your organization achieve financial
-              clarity, improve operational efficiency, and maintain compliance
-              with all applicable regulations.
+              financial data is handled with utmost accuracy and
+              confidentiality. We are committed to helping your organization
+              achieve financial clarity, improve operational efficiency, and
+              maintain compliance with all applicable regulations.
             </p>
           </div>
 

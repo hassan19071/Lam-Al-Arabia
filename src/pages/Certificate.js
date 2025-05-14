@@ -1,6 +1,7 @@
 import React, { useEffect, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet";
 import "../components/style/service-details.scss";
+import TopHeader from "../components/TopHeader";
 
 // Lazy load components
 const Navbar = lazy(() => import("../components/Navbar"));
@@ -40,6 +41,7 @@ function Certificate() {
       </Helmet>
 
       <Suspense fallback={<Loading/>}>
+      <TopHeader/>
         <Navbar page="certificate" />
         <MiniHero title="Contractor Classification Certificate Issuance" />
 
