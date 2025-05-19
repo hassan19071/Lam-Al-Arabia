@@ -19,16 +19,24 @@ function Contact() {
     });
   };
 
+  // ✅ دالة تتبع التحويل من Google Ads
+  const gtag_report_conversion = () => {
+    if (typeof window.gtag !== "undefined") {
+      window.gtag("event", "conversion", {
+        send_to: "AW-17057790080/zg6FCMCm8MkaEIDx5MU_",
+      });
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check if any required field is empty
+    // تحقق من الحقول المطلوبة
     if (!formData.name || !formData.email || !formData.subject) {
       setMessageStatus("Please fill in all required fields.");
-      return; // Prevent form submission if validation fails
+      return;
     }
 
-    // Structure the data into a formatted message body using formData from React state
     const messageBody = `
       Full Name: ${formData.name}
       Email: ${formData.email}
@@ -36,7 +44,6 @@ function Contact() {
       Message: ${formData.message}
     `;
 
-    // Create new FormData to append the message body and access key
     const formDataToSubmit = new FormData();
     formDataToSubmit.append("name", formData.name);
     formDataToSubmit.append("email", formData.email);
@@ -47,7 +54,6 @@ function Contact() {
       "79a76fc0-51dd-4c18-9f7b-62d6ca5a126e"
     );
 
-    // Send the form data to Web3Forms API
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formDataToSubmit,
@@ -55,19 +61,13 @@ function Contact() {
 
     const data = await response.json();
 
-    // Handle success or failure based on Web3Forms response
     if (data.success) {
       setMessageStatus("Message sent successfully!");
 
-      //code conversion from google ads
-      if (window.gtag) {
-        window.gtag('event', 'conversion', {
-          send_to: 'AW-17057790080/QTQtCJ2c6MUaEIDx5MU_',
-        });
-      }
+      // ✅ استدعاء تتبع التحويل بعد نجاح الإرسال
+      gtag_report_conversion();
 
-
-      // Reset form fields after submission
+      // ✅ إعادة تعيين الفورم
       setFormData({
         name: "",
         email: "",
@@ -168,7 +168,7 @@ function Contact() {
             <div className="contact-map">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3576.749814081661!2d50.21371948496805!3d26.302209383394285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDE4JzA4LjAiTiA1MMKwMTInNDEuNSJF!5e0!3m2!1sar!2ssa!4v1736687885340!5m2!1sar!2ssa"
-                width="100%" // Makes the map responsive
+                width="100%"
                 height="450"
                 style={{ border: 0 }}
                 allowFullScreen=""

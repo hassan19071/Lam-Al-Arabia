@@ -19,6 +19,15 @@ function ContactAr() {
     });
   };
 
+  // ✅ دالة تتبع التحويل من Google Ads
+  const gtag_report_conversion = () => {
+    if (typeof window.gtag !== "undefined") {
+      window.gtag("event", "conversion", {
+        send_to: "AW-17057790080/zg6FCMCm8MkaEIDx5MU_",
+      });
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -28,58 +37,50 @@ function ContactAr() {
       return;
     }
 
-     // Structure the data into a formatted message body using formData from React state
-     const messageBody = `
+    // Structure the data into a formatted message body using formData from React state
+    const messageBody = `
      Full Name: ${formData.name}
      Email: ${formData.email}
      Subject: ${formData.subject}
      Message: ${formData.message}
    `;
 
-   // Create new FormData to append the message body and access key
-   const formDataToSubmit = new FormData();
-   formDataToSubmit.append("name", formData.name);
-   formDataToSubmit.append("email", formData.email);
-   formDataToSubmit.append("subject", formData.subject);
-   formDataToSubmit.append("message", messageBody);
-   formDataToSubmit.append(
-     "access_key",
-     "79a76fc0-51dd-4c18-9f7b-62d6ca5a126e"
-   );
+    // Create new FormData to append the message body and access key
+    const formDataToSubmit = new FormData();
+    formDataToSubmit.append("name", formData.name);
+    formDataToSubmit.append("email", formData.email);
+    formDataToSubmit.append("subject", formData.subject);
+    formDataToSubmit.append("message", messageBody);
+    formDataToSubmit.append(
+      "access_key",
+      "79a76fc0-51dd-4c18-9f7b-62d6ca5a126e"
+    );
 
-   // Send the form data to Web3Forms API
-   const response = await fetch("https://api.web3forms.com/submit", {
-     method: "POST",
-     body: formDataToSubmit,
-   });
+    // Send the form data to Web3Forms API
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formDataToSubmit,
+    });
 
-   const data = await response.json();
+    const data = await response.json();
 
-   // Handle success or failure based on Web3Forms response
-   if (data.success) {
-     setMessageStatus("تم ارسال الرسالة بنجاح");
+    // Handle success or failure based on Web3Forms response
+    if (data.success) {
+      setMessageStatus("تم ارسال الرسالة بنجاح");
 
-     //code conversion from google ads
-     if (window.gtag) {
-       window.gtag('event', 'conversion', {
-         send_to: 'AW-17057790080/QTQtCJ2c6MUaEIDx5MU_',
-       });
-     }
+      // ✅ استدعاء تتبع التحويل بعد نجاح الإرسال
+      gtag_report_conversion();
 
-
-     // Reset form fields after submission
-     setFormData({
-       name: "",
-       email: "",
-       subject: "",
-       message: "",
-     });
-   } else {
-     setMessageStatus(
-       "حدث خطأ اثناء الارسال حاول مرة اخرى"
-     );
-   }
-
+      // Reset form fields after submission
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } else {
+      setMessageStatus("حدث خطأ اثناء الارسال حاول مرة اخرى");
+    }
   };
 
   return (
