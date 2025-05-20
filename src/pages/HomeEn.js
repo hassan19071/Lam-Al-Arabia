@@ -35,7 +35,7 @@ function HomeEn() {
         <meta property="og:url" content="https://lam.com.sa" />
         <meta
           name="keywords"
-          content="Lam Al Arabia Professional Consulting,Financial, Administrative Consulting Saudi Arabia,Multidisciplinary consulting firm Dammam & Khoba,Best professional consulting company in Saudi Arabia"
+          content="Lam Al Arabia Professional Consulting,Financial, Administrative Consulting Saudi Arabia,Multidisciplinary consulting firm Dammam & Khoba,Best professional consulting company in Saudi Arabia,professional consulting, finiancial consulting"
         />
       </Helmet>
 

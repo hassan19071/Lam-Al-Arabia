@@ -33,7 +33,7 @@ function AboutEn() {
         <meta property="og:url" content="https://lam.com.sa/about-us" />
         <meta
           name="keywords"
-          content="About Lam Al Arabia Professional Consulting,Experts in financial, administrative consultancy,Who we are – Lam Al Arabia,Trusted professional consulting firm in Saudi Arabia"
+          content="About Lam Al Arabia Professional Consulting,Experts in financial, administrative consultancy,Who we are – Lam Al Arabia,Trusted professional consulting firm in Saudi Arabia,professional consulting, finiancial consulting"
         />
       </Helmet>
 
